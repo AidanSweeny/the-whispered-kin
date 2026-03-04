@@ -1,3 +1,16 @@
+:root {
+  /* Earthy Tone Color Palette */
+  --color-earth-dark: #3e3b37;
+  --color-earth-medium: #6d6a64;
+  --color-earth-light: #a69e8f;
+  --color-earth-cream: #d4cfc0;
+  --color-earth-sand: #c9b19a;
+  --color-earth-sage: #8b9e7a;
+  --color-earth-rust: #a75d4a;
+  --color-earth-bronze: #8b7355;
+  --color-earth-moss: #1c4b1a;
+}
+
 .App {
   text-align: center;
 }

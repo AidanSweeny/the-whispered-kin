@@ -1,25 +1,71 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import HomePage from './components/HomePage';
+import FormPage from './components/FormPage';
+import Intro from './components/Intro';
+import './styles/App.css';
 
-function App() {
+const App = () => {
+  const [currentPage, setCurrentPage] = useState('home');
+  const [showIntro, setShowIntro] = useState(true);
+  const [formData, setFormData] = useState({
+    parentName: '',
+    email: '',
+    phone: '',
+    dueDate: '',
+    gender: '',
+    culturalBackground: '',
+    nameStyle: '',
+    meaningPreference: '',
+    syllables: '',
+    avoidNames: '',
+    additionalNotes: ''
+  });
+
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = () => {
+    if (!formData.parentName || !formData.email) {
+      alert('Please fill in your name and email address');
+      return;
+    }
+    console.log('Form submitted:', formData);
+    alert('Thank you for your interest! We will contact you soon at ' + formData.email);
+    setCurrentPage('home');
+    setFormData({
+      parentName: '',
+      email: '',
+      phone: '',
+      dueDate: '',
+      gender: '',
+      culturalBackground: '',
+      nameStyle: '',
+      meaningPreference: '',
+      syllables: '',
+      avoidNames: '',
+      additionalNotes: ''
+    });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {showIntro && <Intro onComplete={() => setShowIntro(false)} />}
+      {currentPage === 'home' ? (
+        <HomePage setCurrentPage={setCurrentPage} />
+      ) : (
+        <FormPage 
+          setCurrentPage={setCurrentPage}
+          formData={formData}
+          handleInputChange={handleInputChange}
+          handleSubmit={handleSubmit}
+        />
+      )}
+    </>
   );
-}
+};
 
 export default App;

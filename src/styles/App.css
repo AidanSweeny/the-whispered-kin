@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lora:wght@400;500;600&display=swap');
+
+:root {
+  /* Earthy Tone Color Palette */
+  --color-earth-dark: #39513d;
+  --color-earth-medium: #6d6a64;
+  --color-earth-light: #d4d4d3;
+  --color-earth-cream: #bfb9a7;
+  --color-earth-sand: #a6b3aa;
+  --color-earth-sage: #8b9e7a;
+  --color-earth-rust: #704132;
+  --color-earth-bronze: #8b7355;
+  --color-earth-moss: #293f29;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lora', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Shared Header Styles */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  color: var(--color-earth-dark);
+  padding: 1.5rem 0;
+}
+
+.header-container {
+  max-width: 100%;
+  margin: 0;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.logo-icon {
+  padding: 0.5rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tree-logo {
+  width: 5rem;
+  height: 5rem;
+}
+
+.leaf-icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--color-earth-dark);
+}
+
+.site-title {
+  font-size: 1.875rem;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Shared Footer Styles */
+.footer {
+  background-color: var(--color-earth-dark);
+  color: var(--color-earth-cream);
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+.footer-container {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 0.875rem;
+}
