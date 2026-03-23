@@ -24,7 +24,7 @@
 }
 
 .sticky-header.scrolled {
-  background-color: rgba(216, 204, 180, 0.92); /* beige, slightly translucent */
+  background-color: var(--color-earth-light); /* beige, slightly translucent */
   backdrop-filter: blur(6px);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   padding: 0.85rem 2rem;
@@ -32,13 +32,13 @@
 
 /* ── Title ─────────────────────────────────────────────── */
 .sticky-header__title {
-  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-family: 'EB Garamond', 'Palatino Linotype', serif;
   font-size: 2rem;
   font-weight: 700;
   margin-left: 1.5rem;
   letter-spacing: 0.47em;
   text-transform: uppercase;
-  color: #1a5c2a;         /* matches DARK_GREEN from Start.js */
+  color: var(--color-earth-dark);         /* matches DARK_GREEN from Start.js */
   cursor: pointer;
   user-select: none;
   opacity: 0;
@@ -101,7 +101,7 @@
   position: absolute;
   top: calc(100% + 4px);
   right: 2rem;
-  background-color: rgba(216, 204, 180, 0.97);
+  background-color: var(--color-earth-light);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(26, 26, 26, 0.1);
   border-radius: 3px;

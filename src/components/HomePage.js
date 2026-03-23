@@ -3,15 +3,20 @@ import { Leaf, Heart, Sparkles, ArrowRight } from 'lucide-react';
 import '../styles/HomePage.css';
 import Start from './Start';
 import Header from './Header';
-import Picture1 from '../images/Picture1.png';
-import Picture2 from '../images/Picture2.png';
-import Picture3 from '../images/Picture3.png';
-import Picture4 from '../images/Picture4.png'; 
-import Picture5 from '../images/Picture5.avif'; 
-import Picture6 from '../images/Picture6.webp'; 
-import Picture7 from '../images/Picture7.jpg'; 
-import Picture8 from '../images/Picture8.jpg';
-import Picture9 from '../images/Picture9.webp'; 
+import balloon1 from '../images/balloonBlueFlag.png';
+import balloon2 from '../images/balloonBlue.png';
+import balloon3 from '../images/balloonMoon.png';
+import balloon4 from '../images/balloonPlain.png';
+import balloon5 from '../images/balloonRainbow.png';
+import balloon6 from '../images/balloonRedFlagpng.png';
+import balloon7 from '../images/balloonYellowFrill.png';
+import balloon8 from '../images/balloonYellow.png';
+import balloon9 from '../images/balloonRed.png';
+import balloon10 from '../images/balloonBlueRed.png';
+import SubtitleBar from './SubtitleBar';
+import Services from './Services';
+import CtaSection from './CtaSection';
+import { AboutSection } from './AboutSection';
 
 
 const HomePage = ({ setCurrentPage }) => {
@@ -20,7 +25,7 @@ const HomePage = ({ setCurrentPage }) => {
   const parallaxContainerRef = useRef(null);
   const [parallaxOffsets, setParallaxOffsets] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
   const whyRef = useRef(null); // for fade-in of why items
-
+ 
   useEffect(() => {
     if (!timelineRef.current) return;
 
@@ -102,17 +107,6 @@ const HomePage = ({ setCurrentPage }) => {
   return (
     <div className="app-container">
       <div className="home-page">
-      {/* Header */}
-      {/* <header className="header">
-        <div className="header-container">
-          <div className="logo-section">
-            <div className="logo-icon">
-              <img src="/tree-logo.png" alt="The Whispered Kin" className="tree-logo" />
-            </div>
-            <h1 className="site-title">The Whispered Kin</h1>
-          </div>
-        </div>
-      </header> */}
 
       {/* Content sits above ::before background */}
       <div style={{ position: 'relative', zIndex: 1 }}>
@@ -125,101 +119,72 @@ const HomePage = ({ setCurrentPage }) => {
 
       {/* Parallax Gallery Section */}
       <section className="parallax-section" ref={parallaxContainerRef}>
-              {/* <Divider /> */}
-
+        {/* <Divider /> */}
         <div className="parallax-title-bar">
-          {/* <p className="parallax-title">Welcome</p> */}
-          <div className="logo-icon">
-              <img src="/tree-logo.png" alt="The Whispered Kin" className="tree-logo" />
-            </div>
-          <p className="parallax-title">Welcome to The Whispered Kin</p>
-          {/* <p className="parallax-title">A quiet, thoughtful space for families seeking a name that truly belongs</p> */}
+          <p className="parallax-title">Welcome</p>
           <hr/>
-          <p className="parallax-subtitle"> A bespoke baby-naming consultancy devoted to story-rich, meaningful names. We work closely with families to understand their values, heritage, and hopes, to find a name that truly belongs.</p>
         </div>
+          <div>
+          <SubtitleBar />
+          </div>
         <div className="parallax-gallery">
+
+          {/* Balloons BEHIND the text (zIndex < 10) */}
           {[
-            { id: 0, frameType: 'green', size: 'medium', top: '10%', left: '5%', picture: Picture8},
-            { id: 1, frameType: 'green', size: 'large', top: '-20%', left: '40%' , words: "We listen deeply to your family story, values, and instincts"},
-            { id: 2, frameType: 'green', size: 'small', top: '35%', left: '15%' , words: "We focus on story and feeling"},
-            { id: 3, frameType: 'green', size: 'small', top: '50%', left: '70%' , picture: Picture9},
-            { id: 4, frameType: 'green', size: 'medium', top: '20%', left: '75%', words: "We work quietly and personally" },
-            { id: 5, frameType: 'green', size: 'landscape', top: '45%', left: '5%' , picture: Picture6},
-            { id: 6, frameType: 'green', size: 'small', top: '-15%', left: '25%' , words: "5"},
-            { id: 7, frameType: 'green', size: 'small', top: '-25%', left: '60%' , picture: Picture7},
-            { id: 8, frameType: 'green', size: 'medium', top: '60%', left: '55%', words: "6"},
-            { id: 9, frameType: 'green', size: 'small', top: '-10%', left: '80%' , words: "7"},
-          ].map((frame, idx) => (
-            <div
-              key={idx}
-              className={`parallax-frame frame-${frame.frameType} frame-${frame.size}`}
-              style={{ 
-                transform: `translateY(${parallaxOffsets[idx]}px)`,
-                top: frame.top,
-                left: frame.left,
+            { top: '30%', left: '18%', size: 140, image: balloon1,   speed: -4 },
+            { top: '-30%', left: '8%',  size: 200, image: balloon2,  speed: 6 },
+            { top: '10%', left: '40%', size: 160, image: balloon3,  speed: 6 },
+            { top: '-10%', left: '72%', size: 350, image: balloon4,  speed: 8 },
+          ].map((b, i) => (
+            <img
+              key={`back-${i}`}
+              src={b.image}
+              alt=""
+              className="balloon-img"
+              style={{
+                top: b.top,
+                left: b.left,
+                width: b.size,
+                transform: `translateY(${parallaxOffsets[b.speed] ?? 0}px)`,
+                zIndex: 2,
               }}
-            >
-              {frame.picture ? 
-              <div className="frame-content">
-                <img src={frame.picture} alt={`Frame ${idx}`} className="frame-image" />
-              </div> : 
-              <div className="frame-content">
-                <p>{frame.words}</p>
-              </div>}
-            </div>
+            />
           ))}
-        </div>
-      </section>
 
-      {/* Services / Why Section */}
-      <section className="services-section" ref={servicesRef}>
-        <div className="why-items" ref={whyRef}>
+          {/* Floating centre text */}
+          <div className="parallax-float-text">
+            A place where names drift gently into view
+          </div>
+
+          {/* Balloons IN FRONT of the text (zIndex > 10) */}
           {[
-            { title: 'Personalized Care', text: 'We listen closely to your story and preferences to find a name that resonates. Our research covers etymology, heritage, and significance from around the world.' },
-            { title: 'Cultural Depth', text: 'Our research covers etymology, heritage, and significance from around the world. Our research covers etymology, heritage, and significance from around the world.' },
-            { title: 'Lasting Connection', text: 'The right name becomes a lifelong gift, rooted in meaning and love. The right name becomes a lifelong gift, rooted in meaning and love. The right name becomes a lifelong gift, rooted in meaning and love.' },
-          ].map((item, idx) => (
-            <div key={idx} className={`why-item ${idx % 2 === 1 ? 'reverse' : ''}`}>
-              <h3 className="why-item-title">{item.title}</h3>
-              <p className="why-item-text">{item.text}</p>
-            </div>
+            { top: '32%',  left: '5%',  size: 280, image: balloon5,    speed: 4 },
+            { top: '15%', left: '38%', size: 170, image: balloon6,  speed: 10 },
+            { top: '20%', left: '50%', size: 210, image: balloon7, speed: 3 },
+            { top: '-5%', left: '30%', size: 145, image: balloon8, speed: 5 },
+            { top: '20%', left: '82%', size: 190, image: balloon9, speed: 7 },
+            { top: '60%', left: '55%', size: 260, image: balloon10,  speed: 9 },
+          ].map((b, i) => (
+            <img
+              key={`front-${i}`}
+              src={b.image}
+              alt=""
+              className="balloon-img"
+              style={{
+                top: b.top,
+                left: b.left,
+                width: b.size,
+                transform: `translateY(${parallaxOffsets[b.speed] ?? 0}px)`,
+                zIndex: 20,
+              }}
+            />
           ))}
+
         </div>
       </section>
-
-      {/* CTA Section */}
-      <div className="cta-container">
-      <img src="/tree-logo.png" alt="The Whispered Kin" className="tree-logo-big" />
-      <h4 className="cta-title">Ready to begin your naming journey?</h4>
-      <div className="cta-section">
-        <h3 className="cta-title">Plan A</h3>
-        <p className="cta-text">
-          Let us help you discover the perfect name for your little one. Share your preferences, 
-          and we'll craft a personalized selection just for you.
-        </p>
-        <button
-          onClick={() => setCurrentPage('form')}
-          className="cta-button"
-        >
-          Start Your Journey
-          <ArrowRight className="button-icon" />
-        </button>
-      </div>
-      <div className="cta-section">
-        <h3 className="cta-title">Plan B</h3>
-        <p className="cta-text">
-          Let us help you discover the perfect name for your little one. Share your preferences, 
-          and we'll craft a personalized selection just for you.
-        </p>
-        <button
-          onClick={() => setCurrentPage('form')}
-          className="cta-button"
-        >
-          Start Your Journey
-          <ArrowRight className="button-icon" />
-        </button>
-      </div>
-      </div>
+      <AboutSection/>
+      <Services/>
+      <CtaSection />
 
       {/* Footer */}
       <footer className="footer">

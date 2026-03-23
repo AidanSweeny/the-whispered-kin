@@ -8,9 +8,20 @@
   --color-earth-cream: #bfb9a7;
   --color-earth-sand: #a6b3aa;
   --color-earth-sage: #8b9e7a;
-  --color-earth-rust: #704132;
+  --color-earth-rust: #6f4949;
   --color-earth-bronze: #8b7355;
   --color-earth-moss: #293f29;
+}
+
+:root {
+  /* Earthy Tone Color Palette */
+  --color-earth-dark: #972525;
+  --color-earth-medium: #49cbd7;
+  --color-earth-light: #a9bbb8;
+  --color-earth-cream: #8a0e0e;
+  --color-earth-sand: #a6b3aa;
+  --color-earth-rust: #c12d2d;
+  --color-earth-moss: #e2d3b7;
 }
 
 * {
@@ -58,11 +69,6 @@ body {
   justify-content: center;
 }
 
-.tree-logo {
-  width: 5rem;
-  height: 5rem;
-}
-
 .leaf-icon {
   width: 2rem;
   height: 2rem;
@@ -77,7 +83,7 @@ body {
 /* Shared Footer Styles */
 .footer {
   background-color: var(--color-earth-dark);
-  color: var(--color-earth-cream);
+  color: var(--color-earth-moss);
   padding: 2rem 0;
   margin-top: 3rem;
 }

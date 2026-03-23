@@ -8,9 +8,6 @@ const FormPage = ({ setCurrentPage, formData, handleInputChange, handleSubmit })
       <header className="header">
         <div className="header-container">
           <div className="logo-section" onClick={() => setCurrentPage('home')}>
-            <div className="logo-icon">
-              <img src="/tree-logo.png" alt="The Whispered Kin" className="tree-logo" />
-            </div>
             <h1 className="site-title">The Whispered Kin</h1>
           </div>
         </div>

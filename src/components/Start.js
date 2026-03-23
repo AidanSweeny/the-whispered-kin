@@ -6,10 +6,14 @@ const CYCLE_INTERVAL = 1200;
 const FLIP_DELAY = 200;
 const TRAIL_LINGER = 2000;
 
-const BG = "#d8ccb4";
+const BG = "var(--color-earth-light)";
 const BLACK = "#1a1a1a";
-const DARK_GREEN = "#1a5c2a";
-const FLASH_GREEN = "#068133";
+const DARK_GREEN = "#802929";
+
+// Three accent colors for words
+const ACCENT_COLORS = [
+  '#d4845a', '#5a8f6e', '#7a6aac'
+];
 
 function randomChar() {
   return CHARS[Math.floor(Math.random() * CHARS.length)];
@@ -17,7 +21,7 @@ function randomChar() {
 function getCols(w) { return Math.max(8, Math.floor(w / 36)); }
 function getRows(h) { return Math.max(4, Math.floor(h / 40)); }
 
-export default function Start({ names = ["HERITAGE", "TIMELESS", "PERSONAL", "FAMILY", "TRUST", "BESPOKE", "NATURE", "LOVE", "LINEAGE", "FEELING"  ]}) {
+export default function Start({ names = ["HERITAGE", "TIMELESS", "PERSONAL", "FAMILY", "TRUST", "BESPOKE", "NATURE", "LOVE", "LINEAGE", "FEELING"] }) {
   const containerRef = useRef(null);
 
   const [dims, setDims] = useState({ cols: 40, rows: 20 });
@@ -26,14 +30,16 @@ export default function Start({ names = ["HERITAGE", "TIMELESS", "PERSONAL", "FA
   const [cells, setCells] = useState([]);
   const cellsRef = useRef([]);
 
-  const [flashingIds, setFlashingIds] = useState(new Set());
+  // Map of cellId -> accent color index (for flashing name cells)
+  const [flashingMap, setFlashingMap] = useState(new Map());
 
-  // boldIds: set of cell ids currently bolded from hover trail
+  // Set of cell ids currently hovered (all render in HOVER_RED)
   const [boldIds, setBoldIds] = useState(new Set());
   const boldTimersRef = useRef({});
 
   const nameIdxRef = useRef(0);
   const dirIdxRef = useRef(0);
+  const colorIdxRef = useRef(0); // cycles through ACCENT_COLORS for word appearances
 
   // ── Grid builder ─────────────────────────────────────────────────────────────
   const buildGrid = useCallback((cols, rows) => {
@@ -80,8 +86,11 @@ export default function Start({ names = ["HERITAGE", "TIMELESS", "PERSONAL", "FA
 
       const name = names[nameIdxRef.current % names.length];
       const isVertical = dirIdxRef.current % 2 === 1;
+      const wordColorIdx = colorIdxRef.current % ACCENT_COLORS.length;
+
       nameIdxRef.current++;
       dirIdxRef.current++;
+      colorIdxRef.current++;
 
       const indices = [];
       if (isVertical) {
@@ -114,9 +123,17 @@ export default function Start({ names = ["HERITAGE", "TIMELESS", "PERSONAL", "FA
             return next;
           });
 
-          setFlashingIds(prev => new Set([...prev, cellId]));
+          setFlashingMap(prev => {
+            const n = new Map(prev);
+            n.set(cellId, wordColorIdx);
+            return n;
+          });
           setTimeout(() => {
-            setFlashingIds(prev => { const n = new Set(prev); n.delete(cellId); return n; });
+            setFlashingMap(prev => {
+              const n = new Map(prev);
+              n.delete(cellId);
+              return n;
+            });
           }, 1200);
 
         }, i * FLIP_DELAY);
@@ -128,11 +145,10 @@ export default function Start({ names = ["HERITAGE", "TIMELESS", "PERSONAL", "FA
     return () => { clearInterval(interval); clearTimeout(t); };
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // ── Hover: bold the letter, unbold after TRAIL_LINGER ───────────────────────
+  // ── Hover: red trail, fades after TRAIL_LINGER ───────────────────────────────
   const handleMouseEnter = useCallback((id) => {
     setBoldIds(prev => new Set([...prev, id]));
 
-    // Clear any existing timer for this cell
     if (boldTimersRef.current[id]) clearTimeout(boldTimersRef.current[id]);
 
     boldTimersRef.current[id] = setTimeout(() => {
@@ -158,10 +174,23 @@ export default function Start({ names = ["HERITAGE", "TIMELESS", "PERSONAL", "FA
       }}
     >
       {cells.map((cell) => {
-        const isFlashing = flashingIds.has(cell.id);
+        const flashColorIdx = flashingMap.get(cell.id);
+        const isFlashing = flashColorIdx !== undefined;
         const isBold = boldIds.has(cell.id);
-        const color = isFlashing ? FLASH_GREEN : isBold ? FLASH_GREEN : (cell.isKin) ? DARK_GREEN : BLACK;
+
+        let color;
+        if (isBold) {
+          color = DARK_GREEN;
+        } else if (isFlashing) {
+          color = ACCENT_COLORS[flashColorIdx];
+        } else if (cell.isKin) {
+          color = DARK_GREEN;
+        } else {
+          color = BLACK;
+        }
+
         const weight = (isFlashing || cell.isKin || isBold) ? 700 : 400;
+
         return (
           <div
             key={cell.id}

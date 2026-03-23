@@ -17,10 +17,10 @@
   content: '';
   position: fixed;
   inset: 0;
-  background-image: url('../images/background2.jpeg');
-  background-size: cover;
-  background-position: center;
-  filter: saturate(1.2) sepia(0.15);
+  background-image: url('../images/background6.webp');
+  /* background-size: cover;
+  background-position: center; */
+  /* filter: saturate(1.2) sepia(0.15); */
   z-index: 0;
 }
 
@@ -42,20 +42,6 @@
   margin-bottom: 2rem;
   position: relative;
   z-index: 2;
-}
-
-/* Large decorative logo behind hero content */
-.tree-logo-big {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 100%;
-  width: auto;
-  max-width: none;
-  opacity: 0.3;
-  z-index: -1;
-  pointer-events: none;
 }
 
 .hero-icon {
@@ -92,38 +78,25 @@
 
 .parallax-title-bar {
   /* background: linear-gradient(90deg, var(--color-earth-dark), var(--color-earth-moss)); */
-  padding: 1.5rem;
-      padding-bottom: 5rem;
-  background-color: #d8ccb4;
-  text-align: center;
+  padding: 5rem 1.5rem 2rem 3.5rem;    
+  background-color: var(--color-earth-light);
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.15);
 }
 
 .parallax-title {
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 5.8rem;
 font-family: 'EB Garamond', 'Palatino Linotype', serif;
 text-transform: uppercase;
 letter-spacing: 0.12em; 
   color: var(--color-earth-dark);
-}
-
-.parallax-subtitle {
-  margin: 0;
-  font-size: 1.2rem;
-font-family: 'EB Garamond', 'Palatino Linotype', serif;
-text-transform: uppercase;
-letter-spacing: 0.12em; 
-  color: var(--color-earth-dark);
-
 }
 
 hr {
   border: none;
-  margin: 1rem 8rem 1rem 8rem;
+    width: 75%;
   border-top: 1px solid var(--color-earth-dark);
 }
 
@@ -146,12 +119,35 @@ hr {
   will-change: transform;
 }
 
-.frame-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-      display: block;
+.balloon-img {
+  position: absolute;
+  height: auto;
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+  pointer-events: none;
+  user-select: none;
 }
+
+.parallax-float-text {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.7rem;
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 24px rgba(0,0,0,0.18);
+  pointer-events: none;
+  user-select: none;
+}
+
+
 
 
 /* Frame size variants */
@@ -177,7 +173,7 @@ hr {
 
 /* Frame style variants */
 .frame-green {
-  border: 12px rgb(11, 67, 11) solid;
+  border: 12px var(--color-earth-dark) solid;
 }
 
 .frame-gold .frame-content {
@@ -620,7 +616,7 @@ body.no-scroll {
 .cta-text {
   font-size: 1.125rem;
   margin-bottom: 2rem;
-  color: var(--color-earth-cream);
+  color: var(--color-earth-moss);
   max-width: 42rem;
   margin-left: auto;
   margin-right: auto;

@@ -1,125 +1,99 @@
-/* Intro Splash Screen */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400&display=swap');
+
 .intro-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(135deg, var(--color-earth-dark) 0%, var(--color-earth-sage) 100%);
+  background-color: var(--color-earth-moss);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  transition: all 1s ease-out;
+  transition: opacity 1.2s ease-out;
 }
 
-.intro-container.intro-complete {
+.intro-container.intro-leaving {
   opacity: 0;
   pointer-events: none;
 }
 
-.intro-content {
-  text-align: center;
-}
-
-/* Logo */
-.intro-logo {
-  margin-bottom: 3rem;
-  animation: logoFadeIn 0.8s ease-out;
-}
-
-.intro-tree-logo {
-  width: 5rem;
-  height: 5rem;
-  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
-}
-
-.intro-leaf-icon {
-  width: 5rem;
-  height: 5rem;
-  color: var(--color-earth-cream);
-  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
-}
-
-@keyframes logoFadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* Animated Writing Text */
-.intro-text-wrapper {
-  height: 80px;
+/* ── Scene ── */
+.intro-scene {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* ── Sky: cloud + balloon sit in a relative container ── */
+.intro-sky {
+  position: relative;
+  width: 420px;
+  max-width: 90vw;
+  height: 260px;
+}
+
+.intro-cloud {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 85%;
+  height: auto;
+  z-index: 2;
+}
+
+/* Balloon starts peeking behind the cloud (bottom-right area) */
+.intro-balloon {
+  position: absolute;
+  bottom: 60px;
+  right: 30%;
+  width: 28%;
+  height: auto;
+  transform: translate(0, 0);
+  transition: transform 2.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 2.2s ease;
+  opacity: 0.6;
+}
+
+/* Drifts up and to the right, fully revealed */
+.intro-balloon--out {
+  transform: translate(60px, -110px);
+  opacity: 1;
+  animation: balloon-drift 5s ease-in-out infinite;
+  animation-delay: 2.2s;
+}
+
+@keyframes balloon-drift {
+  0%, 100% { transform: translate(60px, -110px); }
+  50%       { transform: translate(68px, -122px); }
+}
+
+/* ── Title ── */
+.intro-title-wrap {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 1.7s ease, transform 1.7s ease;
+}
+
+.intro-title-wrap.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .intro-title {
-  font-size: 3.5rem;
   font-family: 'Cormorant Garamond', serif;
-  color: var(--color-earth-cream);
-  letter-spacing: 2px;
+  font-size: clamp(2rem, 6vw, 3.5rem);
   font-weight: 400;
+  color: var(--color-earth-cream);
+  letter-spacing: 0.15em;
   margin: 0;
-  white-space: nowrap;
-  position: relative;
-  animation: handwriting 3.5s ease-in-out forwards;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
-@keyframes handwriting {
-  0% {
-    opacity: 1;
-    width: 0;
-    clip-path: inset(0 100% 0 0);
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-    width: 100%;
-    clip-path: inset(0 0 0 0);
-  }
-}
-
-/* Text wrapper animation - moves up and transitions to header */
-.intro-text-wrapper-animated {
-  animation: moveToHeader 1s ease-in-out forwards;
-  animation-delay: 0.5s;
-}
-
-@keyframes moveToHeader {
-  0% {
-    transform: translateY(0);
-    font-size: 3.5rem;
-  }
-  100% {
-    transform: translateY(-50vh);
-    font-size: 1.875rem;
-    opacity: 0;
-  }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .intro-tree-logo {
-    width: 10rem;
-    height: 10rem;
-  }
-
-  .intro-leaf-icon {
-    width: 3.5rem;
-    height: 3.5rem;
-  }
-
-  .intro-title {
-    font-size: 2rem;
+@media (max-width: 480px) {
+  .intro-sky {
+    width: 300px;
+    height: 190px;
   }
 }

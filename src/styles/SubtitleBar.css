@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
+
+.parallax-subtitle-bar {
+  background-color: var(--color-earth-moss);
+  padding: 2rem;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.subtitle-container {
+    position: relative;
+    border: var(--color-earth-cream) 1px solid;
+    padding: 2rem;
+}
+
+.subtitle-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* ── Base state — invisible ───────────────────── */
+.subtitle-line {
+  margin: 0;
+  font-family: 'EB Garamond', 'Palatino Linotype', serif;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-earth-cream, #f5ecda);
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 1.7s ease, transform 1.7s ease;
+}
+
+/* ── Visible state ────────────────────────────── */
+.subtitle-line.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Size variants ────────────────────────────── */
+.subtitle-line--primary {
+  font-size: 2.2rem;
+}
+
+.subtitle-line--secondary {
+  font-size: 1.4rem;
+  margin-top: 1.2rem;
+  opacity: 0; /* overridden by .visible */
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: 0.06em;
+}
+
+.subtitle-line--secondary.visible {
+  opacity: 0.8;
+}
+
+.subtitle-line--accent {
+  font-size: 2.6rem;
+  padding-left: 2rem;
+  color: #000000;
+}
+
+.subtitle-line--closing {
+  font-size: 1.5rem;
+  margin-top: 1.4rem;
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: 0.06em;
+  opacity: 0;
+}
+
+.subtitle-line--closing.visible {
+  opacity: 0.9;
+}

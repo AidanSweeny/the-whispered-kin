@@ -1,0 +1,89 @@
+.about-section {
+    padding: 2rem;
+    background-color: var(--color-earth-cream);
+}
+
+.about-container {
+    position: relative;
+    padding: 2rem 1rem 2rem 1rem;
+    border: var(--color-earth-moss) 1px solid;
+    min-height: 520px;
+}
+
+.about-text {
+    max-width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.about-title {
+    font-family: 'EB Garamond', 'Palatino Linotype', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: clamp(2.6rem, 5vw, 4.2rem);
+    font-weight: 400;
+    color: var(--color-earth-moss);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.about-tags {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #d4a96a;
+    margin: 0;
+    margin-bottom: 0.6rem;
+}
+
+.about-info {
+    font-family: 'Nunito', sans-serif;
+    color: var(--color-earth-moss);
+    margin: 0;
+    line-height: 1.7;
+}
+
+.about-info--closing {
+    margin-top: 1rem;
+    font-style: italic;
+    opacity: 0;
+}
+
+.about-info--closing.visible {
+    opacity: 0.75;
+}
+
+/* ── Fade-in base state ── */
+.about-line {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 1.7s ease, transform 1.7s ease;
+}
+
+.about-line.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* closing overrides visible opacity */
+.about-info--closing.visible {
+    opacity: 0.75;
+}
+
+.photo-slideshow {
+    border: var(--color-earth-moss) 2px solid;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 450px;
+    height: 460px;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.7s ease;
+}
+
+.photo-slideshow.visible {
+    opacity: 1;
+}
