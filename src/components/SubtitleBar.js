@@ -1,10 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 import '../styles/SubtitleBar.css';
-import Picture1 from '../images/slideshow1.jpg';
-import Picture2 from '../images/slideshow2.jpg';
-import Picture3 from '../images/slideshow3.jpg';
-import Picture4 from '../images/slideshow4.jpg'; 
-import Picture5 from '../images/slideshow5.jpg';
 
 const LINES = [
   { text: "A bespoke baby-naming consultancy",                style: 'primary' },
@@ -18,7 +13,6 @@ const LINES = [
 
 const SubtitleBar = () => {
   const [visibleCount, setVisibleCount] = useState(0);
-  const [photoVisible, setPhotoVisible] = useState(false);
   const barRef = useRef(null);
   const timersRef = useRef([]);
 
@@ -34,14 +28,12 @@ const SubtitleBar = () => {
             timersRef.current.push(t);
           });
           const photoTimer = setTimeout(() => {
-            setPhotoVisible(true);
           }, LINES.length * 380 + 400);
           timersRef.current.push(photoTimer);
         } else {
           timersRef.current.forEach(clearTimeout);
           timersRef.current = [];
           setVisibleCount(0);
-          setPhotoVisible(false);
         }
       },
       { threshold: 0.25 }

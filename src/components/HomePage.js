@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Leaf, Heart, Sparkles, ArrowRight } from 'lucide-react';
 import '../styles/HomePage.css';
 import Start from './Start';
 import Header from './Header';
@@ -20,7 +19,6 @@ import { AboutSection } from './AboutSection';
 
 
 const HomePage = ({ setCurrentPage }) => {
-  const servicesRef = useRef(null);
   const timelineRef = useRef(null);
   const parallaxContainerRef = useRef(null);
   const [parallaxOffsets, setParallaxOffsets] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);

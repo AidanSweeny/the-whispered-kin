@@ -31,7 +31,7 @@ export function AboutSection() {
             setIndex((i) => (i + 1) % photos.length);
         }, 3000);
         return () => clearInterval(timer);
-    }, []);
+    }, [photos.length]);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
