@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Jost:wght@300;400;500&family=Courier+Prime&display=swap');
+
+.about-me-page {
+  min-height: 100vh;
+  background-color: #d4dcc8;
+  background-image: url('../images/background6.webp');
+  background-attachment: fixed;
+}
+
+/* ── Main layout ───────────────────────────────────────── */
+.about-me-main {
+  padding: 8rem 2rem 6rem;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+}
+
+.about-me-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+/* ── Photo ─────────────────────────────────────────────── */
+.about-me-photo-wrap {
+  position: relative;
+}
+
+.about-me-photo-wrap::before {
+  content: '';
+  position: absolute;
+  inset: -12px;
+  border: 1px solid rgba(28, 75, 26, 0.25);
+  pointer-events: none;
+}
+
+.about-me-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* ── Content ───────────────────────────────────────────── */
+.about-me-eyebrow {
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #6b3030;
+  margin: 0 0 0.75rem;
+}
+
+.about-me-name {
+  font-family: 'EB Garamond', 'Palatino Linotype', serif;
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #8a0e0e;
+  margin: 0 0 0.4rem;
+  line-height: 1.1;
+}
+
+.about-me-role {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #6b3030;
+  margin: 0 0 1.5rem;
+}
+
+.about-me-rule {
+  border: none;
+  border-top: 1px solid rgba(28, 75, 26, 0.25);
+  margin: 0 0 1.75rem;
+  width: 60%;
+}
+
+.about-me-bio {
+  font-family: 'Lora', 'Georgia', serif;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #2c3028;
+  margin: 0 0 1.25rem;
+}
+
+.about-me-btn {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding: 1rem 2.4rem;
+  background: #8a0e0e;
+  border: none;
+  border-radius: 999px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #f5ecda;
+  cursor: pointer;
+  box-shadow: 0 6px 24px rgba(28, 75, 26, 0.25);
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-me-btn:hover {
+  background: #b01212;
+  transform: scale(1.03);
+  box-shadow: 0 10px 32px rgba(28, 75, 26, 0.3);
+}
+
+/* ── Responsive ────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .about-me-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-me-photo-wrap {
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .about-me-photo {
+    aspect-ratio: 1 / 1;
+  }
+
+  .about-me-content {
+    text-align: center;
+  }
+
+  .about-me-rule {
+    margin: 0 auto 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-me-main {
+    padding: 7rem 1.25rem 5rem;
+  }
+}
+
+/* ── Scoped header override for this page only ─────────── */
+.about-me-page .sticky-header.scrolled {
+  background-color: #e2d3b7;
+}

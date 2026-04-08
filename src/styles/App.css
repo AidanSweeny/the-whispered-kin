@@ -1,17 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lora:wght@400;500;600&display=swap');
 
-:root {
-  /* Earthy Tone Color Palette */
-  --color-earth-dark: #39513d;
-  --color-earth-medium: #6d6a64;
-  --color-earth-light: #d4d4d3;
-  --color-earth-cream: #bfb9a7;
-  --color-earth-sand: #a6b3aa;
-  --color-earth-sage: #8b9e7a;
-  --color-earth-rust: #6f4949;
-  --color-earth-bronze: #8b7355;
-  --color-earth-moss: #293f29;
-}
 
 :root {
   /* Earthy Tone Color Palette */

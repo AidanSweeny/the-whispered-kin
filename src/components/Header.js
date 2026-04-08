@@ -1,17 +1,16 @@
 import { useState, useEffect } from 'react';
 import '../styles/Header.css';
 
-const Header = ({ setCurrentPage }) => {
+const Header = ({ setCurrentPage, alwaysVisible = false }) => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 60);
-    };
+    if (alwaysVisible) return;
+    const handleScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [alwaysVisible]);
 
   // Close menu on outside click
   useEffect(() => {
@@ -29,7 +28,7 @@ const Header = ({ setCurrentPage }) => {
   };
 
   return (
-    <header className={`sticky-header ${scrolled ? 'scrolled' : ''}`}>
+    <header className={`sticky-header ${(alwaysVisible || scrolled) ? 'scrolled' : ''}`}>
       {/* Title */}
       <div className="sticky-header__title" onClick={() => navigate('home')}>
         The Whispered Kin
@@ -50,6 +49,8 @@ const Header = ({ setCurrentPage }) => {
         <button onClick={() => navigate('home')}   className="sticky-header__nav-item">Home</button>
         <button onClick={() => navigate('about')}  className="sticky-header__nav-item">About</button>
         <button onClick={() => navigate('form')}   className="sticky-header__nav-item">Start Your Journey</button>
+        <button onClick={() => navigate('faq')}     className="sticky-header__nav-item">FAQ</button>
+        <button onClick={() => navigate('pricing')} className="sticky-header__nav-item">Pricing</button>
       </nav>
     </header>
   );

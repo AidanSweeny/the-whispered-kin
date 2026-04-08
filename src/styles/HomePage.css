@@ -5,12 +5,14 @@
     height: 100%;
     width: 100%;
     position: relative;
+    overflow-x: hidden;
 }
 
 .home-page {
   min-height: 100vh;
   position: relative;
   background-color: #d4dcc8;
+  overflow-x: hidden;
 }
 
 .home-page::before {
@@ -664,6 +666,15 @@ body.no-scroll {
 
   .cta-container {
     padding: 0 1.5rem;
+    padding-top: 5rem;
+    gap: 2rem;
+  }
+
+  .cta-container > .cta-title {
+    font-size: 1.8rem;
+    white-space: normal;
+    text-align: center;
+    width: 90%;
   }
 
   .cta-section {
@@ -672,5 +683,55 @@ body.no-scroll {
 
   .cta-title {
     font-size: 1.5rem;
+  }
+
+  /* Parallax section */
+  .parallax-title-bar {
+    padding: 2.5rem 1rem 1.25rem 1.5rem;
+  }
+
+  .parallax-title {
+    font-size: 2.6rem;
+  }
+
+  .parallax-section {
+    min-height: 600px;
+  }
+
+  .parallax-gallery {
+    height: 700px;
+  }
+
+  .parallax-float-text {
+    font-size: 1.6rem;
+    letter-spacing: 0.08em;
+    padding: 0 1rem;
+  }
+
+  .balloon-hide-mobile {
+    display: none;
+  }
+
+  /* Blurbs */
+  .blurb .blurb-title {
+    font-size: 1.5rem;
+  }
+
+  .blurb .blurb-text {
+    font-size: 1rem;
+  }
+
+  /* Why section */
+  .why-items {
+    padding: 3rem 1.25rem;
+    gap: 2.5rem;
+  }
+
+  .why-item-title {
+    font-size: 1.6rem;
+  }
+
+  .why-item-text {
+    font-size: 1rem;
   }
 }

@@ -149,3 +149,19 @@
   color: #1a5c2a;
   padding-left: 1.85rem;
 }
+
+@media (max-width: 768px) {
+  .sticky-header {
+    padding: 1rem 1.25rem;
+  }
+
+  .sticky-header.scrolled {
+    padding: 0.65rem 1.25rem;
+  }
+
+  .sticky-header__title {
+    font-size: 1.1rem;
+    margin-left: 0;
+    letter-spacing: 0.2em;
+  }
+}

@@ -76,3 +76,32 @@
 .subtitle-line--closing.visible {
   opacity: 0.9;
 }
+
+@media (max-width: 768px) {
+  .parallax-subtitle-bar {
+    padding: 1.25rem;
+  }
+
+  .subtitle-container {
+    padding: 1.25rem;
+  }
+
+  .subtitle-line--primary {
+    font-size: 1.4rem;
+  }
+
+  .subtitle-line--accent {
+    font-size: 1.6rem;
+    padding-left: 0.75rem;
+  }
+
+  .subtitle-line--secondary {
+    font-size: 1rem;
+    margin-top: 0.75rem;
+  }
+
+  .subtitle-line--closing {
+    font-size: 1rem;
+    margin-top: 0.75rem;
+  }
+}

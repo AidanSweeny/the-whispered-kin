@@ -161,7 +161,7 @@ export default function Start({ names = ["HERITAGE", "TIMELESS", "PERSONAL", "FA
     <div
       ref={containerRef}
       style={{
-        padding: "50px",
+        padding: "clamp(16px, 4vw, 50px)",
         width: "100vw", height: "100vh",
         background: BG,
         display: "grid",

@@ -129,16 +129,16 @@ const HomePage = ({ setCurrentPage }) => {
 
           {/* Balloons BEHIND the text (zIndex < 10) */}
           {[
-            { top: '30%', left: '18%', size: 140, image: balloon1,   speed: -4 },
-            { top: '-30%', left: '8%',  size: 200, image: balloon2,  speed: 6 },
-            { top: '10%', left: '40%', size: 160, image: balloon3,  speed: 6 },
-            { top: '-10%', left: '72%', size: 350, image: balloon4,  speed: 8 },
+            { top: '30%', left: '18%', size: 140, image: balloon1,   speed: -4, hideMobile: true },
+            { top: '-30%', left: '8%',  size: 200, image: balloon2,  speed: 6,  hideMobile: false  },
+            { top: '10%', left: '40%', size: 160, image: balloon3,  speed: 6,   hideMobile: false  },
+            { top: '-10%', left: '72%', size: 350, image: balloon4,  speed: 8,  hideMobile: false },
           ].map((b, i) => (
             <img
               key={`back-${i}`}
               src={b.image}
               alt=""
-              className="balloon-img"
+              className={`balloon-img${b.hideMobile ? ' balloon-hide-mobile' : ''}`}
               style={{
                 top: b.top,
                 left: b.left,
@@ -156,18 +156,18 @@ const HomePage = ({ setCurrentPage }) => {
 
           {/* Balloons IN FRONT of the text (zIndex > 10) */}
           {[
-            { top: '32%',  left: '5%',  size: 280, image: balloon5,    speed: 4 },
-            { top: '15%', left: '38%', size: 170, image: balloon6,  speed: 10 },
-            { top: '20%', left: '50%', size: 210, image: balloon7, speed: 3 },
-            { top: '-5%', left: '30%', size: 145, image: balloon8, speed: 5 },
-            { top: '20%', left: '82%', size: 190, image: balloon9, speed: 7 },
-            { top: '60%', left: '55%', size: 260, image: balloon10,  speed: 9 },
+            { top: '32%',  left: '5%',  size: 280, image: balloon5,   speed: 4,  hideMobile: true },
+            { top: '15%', left: '38%', size: 170, image: balloon6,   speed: 10, hideMobile: true  },
+            { top: '20%', left: '50%', size: 210, image: balloon7,   speed: 3,  hideMobile: true  },
+            { top: '-5%', left: '30%', size: 145, image: balloon8,   speed: 5,  hideMobile: true  },
+            { top: '20%', left: '82%', size: 190, image: balloon9,   speed: 7,  hideMobile: true },
+            { top: '60%', left: '55%', size: 260, image: balloon10,  speed: 9,  hideMobile: true  },
           ].map((b, i) => (
             <img
               key={`front-${i}`}
               src={b.image}
               alt=""
-              className="balloon-img"
+              className={`balloon-img${b.hideMobile ? ' balloon-hide-mobile' : ''}`}
               style={{
                 top: b.top,
                 left: b.left,
@@ -182,7 +182,7 @@ const HomePage = ({ setCurrentPage }) => {
       </section>
       <AboutSection/>
       <Services/>
-      <CtaSection />
+      <CtaSection onCtaClick={() => setCurrentPage('form')} />
 
       {/* Footer */}
       <footer className="footer">
