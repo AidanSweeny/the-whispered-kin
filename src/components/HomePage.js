@@ -156,7 +156,7 @@ const HomePage = ({ setCurrentPage }) => {
 
           {/* Balloons IN FRONT of the text (zIndex > 10) */}
           {[
-            { top: '32%',  left: '5%',  size: 280, image: balloon5,   speed: 4,  hideMobile: true },
+            { top: '37%',  left: '5%',  size: 280, image: balloon5,   speed: 4,  hideMobile: true },
             { top: '15%', left: '38%', size: 170, image: balloon6,   speed: 10, hideMobile: true  },
             { top: '20%', left: '50%', size: 210, image: balloon7,   speed: 3,  hideMobile: true  },
             { top: '-5%', left: '30%', size: 145, image: balloon8,   speed: 5,  hideMobile: true  },
@@ -182,12 +182,14 @@ const HomePage = ({ setCurrentPage }) => {
       </section>
       <AboutSection/>
       <Services/>
-      <CtaSection onCtaClick={() => setCurrentPage('form')} />
+      <CtaSection onCtaClick={() => setCurrentPage('pricing')} />
 
       {/* Footer */}
       <footer className="footer">
         <div className="footer-container">
           <p className="footer-text">© 2024 The Whispered Kin. Nurturing names, honoring heritage.</p>
+          <p className="footer-text"><a href="mailto:cassia@thewhisperedkin.com" style={{ color: 'inherit', textDecoration: 'underline' }}>cassia@thewhisperedkin.com</a></p>
+          <p className="footer-text"><a href="https://www.instagram.com/thewhisperedkin" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>@thewhisperedkin</a></p>
         </div>
       </footer>
       </div>{/* end content z-index wrapper */}

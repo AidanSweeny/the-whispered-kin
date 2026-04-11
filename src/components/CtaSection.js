@@ -58,8 +58,6 @@ export default function CtaSection({ onCtaClick }) {
         <h2 className="cta__heading">Ready to begin your naming journey?</h2>
         <p className="cta__text">
           Let us help you discover the perfect name for your little one.
-          Share your preferences, and we'll craft a personalized selection
-          just for you.
         </p>
         <button className="cta__btn" onClick={onCtaClick}>
           Start Your Journey

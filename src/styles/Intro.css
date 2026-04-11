@@ -24,7 +24,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
 }
 
 /* ── Sky: cloud + balloon sit in a relative container ── */
@@ -39,7 +38,7 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 85%;
+  width: 100%;
   height: auto;
   z-index: 2;
 }
@@ -47,9 +46,9 @@
 /* Balloon starts peeking behind the cloud (bottom-right area) */
 .intro-balloon {
   position: absolute;
-  bottom: 60px;
+  bottom: 80px;
   right: 30%;
-  width: 28%;
+  width: 20%;
   height: auto;
   transform: translate(0, 0);
   transition: transform 2.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 2.2s ease;
@@ -58,14 +57,14 @@
 
 /* Drifts up and to the right, fully revealed */
 .intro-balloon--out {
-  transform: translate(60px, -110px);
+  transform: translate(60px, -80px);
   opacity: 1;
-  animation: balloon-drift 5s ease-in-out infinite;
+  animation: balloon-drift 7s ease-in-out infinite;
   animation-delay: 2.2s;
 }
 
 @keyframes balloon-drift {
-  0%, 100% { transform: translate(60px, -110px); }
+  0%, 100% { transform: translate(60px, -80); }
   50%       { transform: translate(68px, -122px); }
 }
 

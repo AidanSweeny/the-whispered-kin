@@ -118,6 +118,9 @@ export default function FAQPage({ setCurrentPage }) {
           </p>
         </section>
 
+        {/* Back */}
+        <button className="page-back-btn" onClick={() => setCurrentPage('home')}>← Back</button>
+
         {/* Category nav */}
         <nav className="faq-nav">
           <button
@@ -176,10 +179,16 @@ export default function FAQPage({ setCurrentPage }) {
           <p className="faq-cta-body">
             Take the questionnaire and we'll be in touch within a week.
           </p>
-          <a href="/questionnaire" className="faq-cta-btn">
+          <a className="faq-cta-btn" onClick={()=>{setCurrentPage('pricing')}}>
             Begin Your Journey →
           </a>
         </section>
+
+        <footer className="faq-footer">
+          © 2024 The Whispered Kin. Nurturing names, honoring heritage.<br />
+          <a href="mailto:cassia@thewhisperedkin.com">cassia@thewhisperedkin.com</a><br />
+          <a href="https://www.instagram.com/thewhisperedkin" target="_blank" rel="noreferrer">@thewhisperedkin</a>
+        </footer>
 
       </div>
     </>

@@ -7,6 +7,9 @@ const FormPage = ({ setCurrentPage, formData, handleInputChange, handleSubmit, s
     <div className="form-page">
       <Header setCurrentPage={setCurrentPage} alwaysVisible />
 
+      {/* Back */}
+      <button className="page-back-btn" onClick={() => setCurrentPage('home')}>← Back</button>
+
       {/* Hero */}
       <div className="form-hero">
         <h1 className="form-hero-title">Tell Us About<br />Your Little One</h1>
@@ -45,17 +48,6 @@ const FormPage = ({ setCurrentPage, formData, handleInputChange, handleSubmit, s
             <label className="form-label">Expected Due Date</label>
             <input type="date" name="dueDate" value={formData.dueDate}
               onChange={handleInputChange} className="form-input" />
-          </div>
-          <div className="form-field">
-            <label className="form-label">Baby's sex, if known</label>
-            <select name="babySex" value={formData.babySex}
-              onChange={handleInputChange} className="form-input">
-              <option value="">Select an option</option>
-              <option value="boy">Boy</option>
-              <option value="girl">Girl</option>
-              <option value="not-yet-known">Not yet known</option>
-              <option value="prefer-not-to-say">Prefer not to say</option>
-            </select>
           </div>
           <div className="form-field">
             <label className="form-label">Gender Preference</label>
@@ -146,6 +138,8 @@ const FormPage = ({ setCurrentPage, formData, handleInputChange, handleSubmit, s
       <footer className="footer">
         <div className="footer-container">
           <p className="footer-text">© 2024 The Whispered Kin. Nurturing names, honoring heritage.</p>
+          <p className="footer-text"><a href="mailto:cassia@thewhisperedkin.com" style={{ color: 'inherit', textDecoration: 'underline' }}>cassia@thewhisperedkin.com</a></p>
+          <p className="footer-text"><a href="https://www.instagram.com/thewhisperedkin" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>@thewhisperedkin</a></p>
         </div>
       </footer>
     </div>

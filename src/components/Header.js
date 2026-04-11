@@ -48,9 +48,8 @@ const Header = ({ setCurrentPage, alwaysVisible = false }) => {
       <nav className={`sticky-header__dropdown ${menuOpen ? 'open' : ''}`}>
         <button onClick={() => navigate('home')}   className="sticky-header__nav-item">Home</button>
         <button onClick={() => navigate('about')}  className="sticky-header__nav-item">About</button>
-        <button onClick={() => navigate('form')}   className="sticky-header__nav-item">Start Your Journey</button>
+        <button onClick={() => navigate('pricing')} className="sticky-header__nav-item">Start Your Journey</button>
         <button onClick={() => navigate('faq')}     className="sticky-header__nav-item">FAQ</button>
-        <button onClick={() => navigate('pricing')} className="sticky-header__nav-item">Pricing</button>
       </nav>
     </header>
   );

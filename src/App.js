@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import HomePage from './components/HomePage';
 import FormPage from './components/FormPage';
 import AboutMePage from './components/AboutMePage';
 import FAQPage from './components/FAQPage';
 import PricingPage from './components/PricingPage';
+import ServicePage from './components/ServicePage';
 import Intro from './components/Intro';
 import './styles/App.css';
 
@@ -25,9 +26,19 @@ const EMPTY_FORM = {
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('home');
+  const [selectedService, setSelectedService] = useState(null);
   const [showIntro, setShowIntro] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [formData, setFormData] = useState(EMPTY_FORM);
+
+  const handleServiceSelect = (serviceId) => {
+    setSelectedService(serviceId);
+    setCurrentPage('service');
+  };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPage]);
 
   const handleInputChange = (e) => {
     setFormData({
@@ -81,7 +92,8 @@ const App = () => {
         />
       )}
       {currentPage === 'faq' && <FAQPage setCurrentPage={setCurrentPage} />}
-      {currentPage === 'pricing' && <PricingPage setCurrentPage={setCurrentPage} />}
+      {currentPage === 'pricing' && <PricingPage setCurrentPage={setCurrentPage} onServiceSelect={handleServiceSelect} />}
+      {currentPage === 'service' && <ServicePage setCurrentPage={setCurrentPage} service={selectedService} />}
     </>
   );
 };

@@ -38,7 +38,7 @@
   margin-left: 1.5rem;
   letter-spacing: 0.47em;
   text-transform: uppercase;
-  color: var(--color-earth-dark);         /* matches DARK_GREEN from Start.js */
+  color: var(--color-earth-cream);         /* matches DARK_GREEN from Start.js */
   cursor: pointer;
   user-select: none;
   opacity: 0;
@@ -52,7 +52,7 @@
 }
 
 .sticky-header__title:hover {
-  color: #068133; /* FLASH_GREEN on hover */
+  color: var(--color-earth-cream); /* FLASH_GREEN on hover */
 }
 
 /* ── Hamburger button ──────────────────────────────────── */
@@ -93,7 +93,7 @@
 }
 
 .sticky-header__menu-btn:hover .sticky-header__bar {
-  background-color: #068133;
+  background-color: var(--color-earth-cream);
 }
 
 /* ── Dropdown ──────────────────────────────────────────── */
@@ -146,7 +146,7 @@
 
 .sticky-header__nav-item:hover {
   background-color: rgba(26, 92, 42, 0.08);
-  color: #1a5c2a;
+  color: var(--color-earth-cream);
   padding-left: 1.85rem;
 }
 
