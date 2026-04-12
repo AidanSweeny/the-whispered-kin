@@ -179,9 +179,9 @@ export default function FAQPage({ setCurrentPage }) {
           <p className="faq-cta-body">
             Take the questionnaire and we'll be in touch within a week.
           </p>
-          <a className="faq-cta-btn" onClick={()=>{setCurrentPage('pricing')}}>
+          <button className="faq-cta-btn" onClick={() => setCurrentPage('pricing')}>
             Begin Your Journey →
-          </a>
+          </button>
         </section>
 
         <footer className="faq-footer">

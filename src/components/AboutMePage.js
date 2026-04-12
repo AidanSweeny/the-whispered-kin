@@ -24,32 +24,31 @@ export default function AboutMePage({ setCurrentPage }) {
             <h1 className="about-me-name">Cassia</h1>
             <p className="about-me-role">Founder &amp; Naming Consultant</p>
             <hr className="about-me-rule" />
-            <p className="about-me-bio">
-              Names have been a lifelong fascination — one shaped from an early age by an exceptional attention to detail and meaning.
-              </p>
-            <p className="about-me-bio">
-
-Growing up, naming was never treated as an afterthought. My mother approached it with remarkable care, intention, and precision. When naming me and my siblings, every element was considered. Each name was six letters long, each included an “i” and an “a” — letters she felt created a sense of beauty and balance. Our names were quietly connected through biblical siblings, and our middle names were equally intentional: inspired by the flowers from my parents’ wedding day, the millennium in which we were born, and family members who hold deep significance to us.
-
-The result was something far greater than a collection of names. They became part of who we are — balanced, distinctive, meaningful, and enduring. Names we have always been proud to carry.
-</p>
-            <p className="about-me-bio">
-
-That foundation shaped a natural instinct. I have always been drawn to the nuance of names — how they sound, how they feel, and what they communicate. Whether speaking with friends, strangers, or families I’ve worked closely with, the conversation often returns to names. Time and again, I’ve seen how much weight they hold — and how powerful it is to find the right one.
-
-This is what led me to establish my naming consultancy.
-</p>
-            <p className="about-me-bio">
-
-I believe naming is both an art and a discipline — one that requires sensitivity, creativity, and discernment. A truly exceptional name feels effortless, yet is the result of careful thought, deep consideration, and an understanding of meaning, rhythm, and identity.
-</p>
-            <p className="about-me-bio">
-
-My approach is highly considered and deeply personal. Each name is crafted with intention — designed not only to stand out, but to resonate, to endure, and to feel inherently right.
-</p>
-            <p className="about-me-bio">
-
-Because the right name doesn’t just fit — it defines.
+            <p className=”about-me-bio”>
+              Names have been the language of my family for as long as I can remember.
+              My mother — whose thought and care for such things is, I think, genuinely
+              second to none — gave each of her children a name that was both considered
+              and deeply felt. We all have six letters. We each carry an <em>i</em> and
+              an <em>a</em>, which she has always believed make a name prettier to the
+              eye and the ear. We are siblings in the Bible, give or take the translation.
+              Our middle names hold the flowers from my parents’ wedding day, the turn of
+              the millennium, and the people in our family who meant too much to be
+              forgotten.
+            </p>
+            <p className=”about-me-bio”>
+              I grew up knowing that my name was not chosen lightly. It was balanced,
+              strong, distinctive — and it meant something, not just in origin, but in
+              the story of where I came from. That knowledge settled something in me early,
+              and it never quite left. Names followed me into every corner of my life:
+              conversations with close friends, long flights with strangers who happened
+              to ask the right question, the homes of families whose children I spent years
+              caring for. Wherever I went, I found my way back to them.
+            </p>
+            <p className=”about-me-bio”>
+              The Whispered Kin grew from that lifelong conversation. I believe the right
+              name is rarely chosen from a list — it is recognised. It is already somewhere
+              in the story of your family, waiting for the right moment and the right
+              person to help you hear it. That is what I am here for.
             </p>
             <button
               className="about-me-btn"
