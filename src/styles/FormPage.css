@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cormorant+Garamond:ital,wght@0,400;1,400;1,500&family=Jost:wght@300;400;500&family=Courier+Prime&display=swap');
 
 .form-page {
-  font-size: 112.5%;
   min-height: 100vh;
   background-color: #d4dcc8;
   background-image: url('../images/background6.webp');

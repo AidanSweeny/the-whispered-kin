@@ -7,19 +7,19 @@ const faqs = [
     items: [
       {
         q: "How does it work?",
-        a: "It begins with our questionnaire — a gentle, unhurried set of questions about your family's heritage, your instincts, the names you've loved from afar, and the hopes you carry for your child. Once you've submitted your answers, we read them carefully and spend time researching names across languages, histories, and literary traditions. Within a week, we'll send you a beautifully curated PDF with three to five names chosen especially for your family — each with its full story, meaning, and origin explained.",
+        a: "It begins with our free questionnaire — 10 to 15 minutes, taken at your own pace. Once we've read your answers, we'll be in touch within two working days with our initial thoughts. From there, you choose the path that feels right: The Whisper (£50), The Journey (£200), or The Unfolding (£375). For anything you'd like to ask before starting, email cassia@thewhisperedkin.com.",
       },
       {
         q: "How long does it take?",
-        a: "We ask for up to one week from the moment we receive your completed questionnaire. Good naming takes time — we won't rush it. If you have an urgent deadline, such as a baby who has arrived early, please do mention it when you submit your questionnaire and we will do everything we can to accommodate you.",
+        a: "We respond to all questionnaires within two working days. From there, the timeline depends on the package you choose — from a focused single session with The Whisper, to an ongoing, open-ended relationship with The Unfolding. If you have an urgent deadline, please mention it in your questionnaire and we'll do everything we can.",
       },
       {
         q: "What do I actually receive?",
-        a: "You'll receive a curated PDF report containing three to five names selected with care for your family specifically. Each name comes with its meaning, origin, linguistic heritage, and our notes on why we felt it belonged to you. It is not a long list — it is a considered one. Quality over quantity is at the heart of everything we do.",
+        a: "It depends on your chosen path. The Whisper includes a curated shortlist explored together in a 30-minute consultation. The Journey delivers two one-hour sessions and a beautifully crafted PDF report. The Unfolding offers complete accompaniment — three sessions, a shared living document, and a personal naming letter to keep. For a full breakdown, visit our Services page or email cassia@thewhisperedkin.com.",
       },
       {
-        q: "What happens after I receive my names?",
-        a: "After you've had time to sit with your names, we offer a follow-up call or email Q&A where you can ask questions, share your reactions, and talk through anything that's on your mind. Sometimes a name needs a little conversation before it settles. We're here for that.",
+        q: "What happens after I submit the questionnaire?",
+        a: "We read every answer carefully and write to you within two working days. For The Journey and The Unfolding, we'll also send a more in-depth questionnaire once your place is confirmed and payment is arranged. Every package includes follow-up support — you're never left without someone to ask.",
       },
     ],
   },
@@ -28,19 +28,19 @@ const faqs = [
     items: [
       {
         q: "How long does the questionnaire take?",
-        a: "Most families take between 10 and 20 minutes. There are no right or wrong answers — only yours. Some people write a few sentences; others find it opens something and write much more. Both are completely welcome. The detail you almost didn't include is often the most useful.",
+        a: "Most families take 10 to 15 minutes. There are no right or wrong answers — only yours. The detail you almost didn't include is often the most useful.",
       },
       {
         q: "Do we need to know the sex of our baby?",
-        a: "Not at all. Many families come to us not knowing, or deliberately keeping it a surprise. In those cases, we can prepare names across the full spectrum, or focus on names that feel beautifully ungendered. Simply let us know your situation in the questionnaire.",
+        a: "Not at all. We can work with any situation — known sex, unknown, or names that feel beautifully ungendered. Simply let us know in the questionnaire.",
       },
       {
         q: "What if my partner and I disagree on names?",
-        a: "This is one of the most common things families tell us — and it's often why they come to us. When two people with different instincts can't find common ground, an outside perspective can help enormously. We read both sets of feelings and look for names that might speak to both of you. Occasionally, the right name is one neither of you had considered yet.",
+        a: "It's one of the most common reasons families come to us. We read both sets of instincts and look for names that speak to you both. Occasionally, the right name is one neither of you had considered yet.",
       },
       {
-        q: "Can I complete the questionnaire even if I already have some names in mind?",
-        a: "Absolutely — and please do share them. Names you've loved, names that felt close but not quite right, names you were surprised to find yourselves drawn to: all of it is useful. The more honestly you share, the better we can understand what you're really looking for.",
+        q: "Can I complete the questionnaire if I already have names in mind?",
+        a: "Please do share them. Names you've loved, names that felt close but not quite right — all of it helps us understand what you're truly looking for.",
       },
     ],
   },
@@ -49,19 +49,19 @@ const faqs = [
     items: [
       {
         q: "Where do you find the names?",
-        a: "Everywhere. We draw on etymology, mythology, literature, history, linguistics, botanical and natural naming traditions, place names, and the quiet corners of cultural heritage that rarely make it onto popular baby name lists. We also pay close attention to how a name sounds alongside your surname, how it wears across a lifetime, and whether it carries the feeling you described.",
+        a: "Everywhere — etymology, mythology, literature, history, linguistics, botanical traditions, and the quieter corners of cultural heritage. We also consider how a name sounds alongside your surname and how it wears across a lifetime.",
       },
       {
-        q: "Will the names be unusual? I don't want something too out there.",
-        a: "We take our cue entirely from you. If you want something timeless and familiar with a gentle distinction, that's what we'll find. If you want something quietly rare and deeply meaningful, we'll go there. We don't have an agenda toward unusual names — we have an agenda toward the right name for your family.",
+        q: "Will the names be unusual?",
+        a: "We take our cue entirely from you. Timeless and familiar, or quietly rare and deeply meaningful — we don't have an agenda toward unusual. We have an agenda toward right.",
       },
       {
         q: "Can you help with middle names too?",
-        a: "Yes. If you'd like us to consider middle names alongside first names — whether to honour a family member, balance a longer surname, or simply because you want the full picture — please mention this in your questionnaire. We're happy to look at the name as a whole.",
+        a: "Yes. Sibling harmony and middle name consideration are included in The Journey and The Unfolding. If you have specific questions about this, email cassia@thewhisperedkin.com.",
       },
       {
         q: "Do you only suggest English names?",
-        a: "Not at all. Our research spans languages and cultures across the world — from Celtic and Scandinavian traditions to Arabic, Hebrew, Japanese, Latin, and beyond. If your family has a particular heritage or a language you love the sound of, we'll explore it. If you're open to everything, so are we.",
+        a: "Not at all. Our research spans Celtic, Scandinavian, Arabic, Hebrew, Latin, and many more traditions. If your family has a particular heritage or a language you love, we'll explore it.",
       },
     ],
   },
@@ -70,19 +70,19 @@ const faqs = [
     items: [
       {
         q: "Is my information kept private?",
-        a: "Completely. Everything you share with us — your family's story, your hopes, the personal details in your questionnaire — is treated with the same discretion we would wish for ourselves. We never share your information with third parties for marketing purposes. You can read our full Privacy Policy for details.",
+        a: "Completely. Everything you share is held with care and confidence. We never share your information with third parties. For any privacy questions, email cassia@thewhisperedkin.com.",
       },
       {
         q: "What if none of the names feel right?",
-        a: "We'd be very surprised — but not unmoved. If you receive your names and feel genuinely that we've missed the mark, please tell us. We'd rather understand where we went and try again than leave you without the name your child deserves. We care about the outcome, not just the delivery.",
+        a: "Please tell us. We'd rather understand and try again than leave you without the right name. Email cassia@thewhisperedkin.com and we'll talk it through.",
       },
       {
-        q: "When should I get in touch — how early is too early?",
-        a: "There is no such thing as too early. Some families come to us in the first trimester, wanting to begin the conversation long before the birth. Others reach out in the final weeks, or even after their baby has arrived and they're still searching. Wherever you are in the journey, you're welcome here.",
+        q: "When should I get in touch?",
+        a: "There is no such thing as too early — or too late. Some families come in the first trimester; others reach out after their baby has arrived. Wherever you are in the journey, you're welcome here.",
       },
       {
         q: "Do you work with families outside the UK?",
-        a: "Yes — our work is entirely online, and we work with families all over the world. If English is not your first language but you're comfortable writing in it, we're able to work together. We also welcome enquiries in French.",
+        a: "Yes — we work entirely online and with families all over the world. For any questions about working together internationally, email cassia@thewhisperedkin.com.",
       },
     ],
   },
