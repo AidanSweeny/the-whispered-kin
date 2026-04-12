@@ -25,7 +25,7 @@ export default function AboutMePage({ setCurrentPage }) {
             <p className="about-me-role">Founder &amp; Naming Consultant</p>
             <hr className="about-me-rule" />
             <p className="about-me-bio">
-              Names have been the language of my family for as long as I can remember.
+              Names have been a topic of conversation for my family for as long as I can remember.
               My mother — whose thought and care for such things is, I think, genuinely
               second to none — gave each of her children a name that was both considered
               and deeply felt. We all have six letters. We each carry an <em>i</em> and
