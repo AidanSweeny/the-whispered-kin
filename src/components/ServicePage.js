@@ -236,10 +236,10 @@ export default function ServicePage({ setCurrentPage, service }) {
           border-top: 1px solid rgba(44,24,16,0.1);
           padding: 28px 32px;
           text-align: center;
-          font-size: 26px;
+          font-size: 14px;
           font-style: italic;
           color: #7a6050;
-          line-height: 1.9;
+          line-height: 1.8;
         }
 
         @media (max-width: 600px) {

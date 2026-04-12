@@ -490,9 +490,9 @@ const styles = `
     color: #e2d3b7;
     padding: 28px 32px;
     text-align: center;
-    font-size: 28px;
+    font-size: 15px;
     font-style: italic;
-    line-height: 1.9;
+    line-height: 1.8;
   }
   .pr-footer a { color: inherit; text-decoration: underline; }
 
