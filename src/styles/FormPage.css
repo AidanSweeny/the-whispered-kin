@@ -206,6 +206,11 @@ select.form-input {
     flex: none;
     width: 100%;
   }
+
+  /* Prevent iOS Safari from auto-zooming when inputs are focused */
+  .form-input {
+    font-size: 16px;
+  }
 }
 
 /* ── Scoped header override for this page only ─────────── */
