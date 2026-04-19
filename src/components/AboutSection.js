@@ -7,11 +7,11 @@ import Picture5 from '../images/slideshow5.jpg';
 import { useEffect, useRef, useState } from 'react';
 
 const LINES = [
-  { text: "Our Philosophy",                                                                          className: "about-title" },
+  { text: "My Philosophy",                                                                          className: "about-title" },
   { text: "Trust · Family · Heritage",                                                         className: "about-tags" },
-  { text: "At The Whispered kin, we belive the right name is rarely chosen from a list. Our work is rooted in listening; to family stories, to heritage and language, and by listening to instincts when the space is given. The result is a name that feels natural, meaningful, and deeply connnected to the child who will carry it.", className: "about-info" },
-  { text: "Every name carries a story — a thread connecting past, present, and future. We believe that choosing a name is one of the most profound gifts a parent can give.", className: "about-info" },
-  { text: "Our consultants draw on history, linguistics, and cultural heritage to guide you toward a name that feels both timeless and entirely your own.", className: "about-info" },
+  { text: "At The Whispered Kin, I believe the right name is rarely chosen from a list. My work is rooted in listening; to family stories, to heritage and language, and to instincts when the space is given. The result is a name that feels natural, meaningful, and deeply connected to the child who will carry it.", className: "about-info" },
+  { text: "Every name carries a story — a thread connecting past, present, and future. I believe that choosing a name is one of the most profound gifts a parent can give.", className: "about-info" },
+  { text: "I draw on history, linguistics, and cultural heritage to guide you toward a name that feels both timeless and entirely your own.", className: "about-info" },
   { text: "Founded on the belief that names shape identity.",                                          className: "about-info about-info--closing" },
 ];
 

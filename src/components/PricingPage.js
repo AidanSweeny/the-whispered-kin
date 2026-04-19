@@ -522,10 +522,10 @@ const packages = [
     price: "50",
     tagline: "A gentle, focused conversation for families who need a little guidance.",
     features: [
-      { text: "Our naming questionnaire — your starting point, taken at your own pace" },
-      { text: "One 30-minute consultation by call or video to talk through your answers and our initial thoughts" },
+      { text: "My naming questionnaire — your starting point, taken at your own pace" },
+      { text: "One 30-minute consultation by call or video to talk through your answers and my initial thoughts" },
       { text: "A curated shortlist of names explored together during your session" },
-      { text: "Follow-up email summary of everything we covered" },
+      { text: "Follow-up email summary of everything covered" },
     ],
     btn: "pr-btn-outline",
     btnText: "Begin with The Whisper",
@@ -539,9 +539,9 @@ const packages = [
     price: "200",
     tagline: "For families who want to explore deeply and arrive at their name with real confidence.",
     features: [
-      { text: "Our most comprehensive in-depth questionnaire" },
+      { text: "My most comprehensive in-depth questionnaire" },
       { text: "Two one-hour consultations by call or video, at a pace that suits you" },
-      { text: "A beautifully ", em: "curated PDF report", rest: " — your names with their full meanings, origins, and our personal notes" },
+      { text: "A beautifully ", em: "curated PDF report", rest: " — your names with their full meanings, origins, and my personal notes" },
       { text: "Sibling harmony, middle name, and surname flow all considered" },
       { text: "Follow-up email Q&A after each session" },
     ],
@@ -558,7 +558,7 @@ const packages = [
     price: "375",
     tagline: "Complete accompaniment to the moment the name becomes theirs.",
     features: [
-      { text: "Our most comprehensive in-depth questionnaire" },
+      { text: "My most comprehensive in-depth questionnaire" },
       { text: "Three one-hour consultations by call or video" },
       { text: "A ", em: "shared, living document", rest: " — your names, research, and notes updated together as the process evolves" },
       { text: "Continued communication by messaging until your name is decided — no fixed end date" },
@@ -595,7 +595,7 @@ export default function PricingPage({ setCurrentPage, onServiceSelect }) {
 
         <section className="pr-hero">
           <div className="pr-hero-eyebrow">Investment &amp; Packages</div>
-          <h1 className="pr-hero-title">Our Services</h1>
+          <h1 className="pr-hero-title">Services</h1>
           <div className="pr-hero-rule" />
           <p className="pr-hero-sub">
             Whether you need
@@ -619,8 +619,8 @@ export default function PricingPage({ setCurrentPage, onServiceSelect }) {
                 <span className="pr-free-badge">Free</span>
               </div>
               <div className="pr-free-desc">
-                Before anything else, we listen. Our questionnaire takes 10–15 minutes
-                and is the first step for every family, whichever path they choose. We will get back to you within 1 week with initial ideas and thoughts based on your answers — no obligation to continue until you're ready.
+                Before anything else, I listen. My questionnaire takes 10–15 minutes
+                and is the first step for every family, whichever path they choose. I will get back to you within 1 week with initial ideas and thoughts based on your answers — no obligation to continue until you're ready.
 
               </div>
               <div className="pr-free-features">
@@ -676,8 +676,8 @@ export default function PricingPage({ setCurrentPage, onServiceSelect }) {
         <div className="pr-bespoke">
           <div className="pr-bespoke-title">Not sure which to choose?</div>
           <div className="pr-bespoke-body">
-            Start with the free questionnaire — we'll suggest the path that feels right
-            for your situation. You're also welcome to write to us first at{" "}
+            Start with the free questionnaire — I'll suggest the path that feels right
+            for your situation. You're also welcome to write to me first at{" "}
             <span style={{ color: "#8b1a1a" }}>cassia@thewhisperedkin.com</span>.
             There's no obligation until you're ready.
           </div>
@@ -688,7 +688,7 @@ export default function PricingPage({ setCurrentPage, onServiceSelect }) {
           <div>
             <div className="pr-promise-icon">✦</div>
             <div className="pr-promise-title">No rushing</div>
-            <p className="pr-promise-text">We work at the pace your family needs. There are no hurried lists here.</p>
+            <p className="pr-promise-text">I work at the pace your family needs. There are no hurried lists here.</p>
           </div>
           <div>
             <div className="pr-promise-icon">✦</div>
@@ -698,7 +698,7 @@ export default function PricingPage({ setCurrentPage, onServiceSelect }) {
           <div>
             <div className="pr-promise-icon">✦</div>
             <div className="pr-promise-title">Complete discretion</div>
-            <p className="pr-promise-text">Everything you share stays between us, held with care and confidence.</p>
+            <p className="pr-promise-text">Everything you share is held with care and confidence.</p>
           </div>
         </div>
 
@@ -707,7 +707,7 @@ export default function PricingPage({ setCurrentPage, onServiceSelect }) {
           <div className="pr-cta-eyebrow">Ready to Begin</div>
           <h2 className="pr-cta-title">The right name is<br />already out there</h2>
           <p className="pr-cta-body">
-            Start with our free questionnaire — it's the same first step, whichever path you choose.
+            Start with my free questionnaire — it's the same first step, whichever path you choose.
           </p>
           <button className="pr-cta-btn" onClick={() => setCurrentPage('form')}>Begin Your Journey →</button>
         </section>

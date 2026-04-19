@@ -13,7 +13,7 @@ const FormPage = ({ setCurrentPage, formData, handleInputChange, handleSubmit, s
       {/* Hero */}
       <div className="form-hero">
         <h1 className="form-hero-title">Tell Us About<br />Your Little One</h1>
-        <p className="form-hero-subtitle">Share your preferences and we'll find the name that truly belongs.</p>
+        <p className="form-hero-subtitle">Share your preferences and I'll find the name that truly belongs.</p>
       </div>
 
       {/* Form body */}

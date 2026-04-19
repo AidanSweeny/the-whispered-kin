@@ -14,10 +14,10 @@ const SERVICE_DATA = {
     headerBg: '#bcd4de',
     btnTextColor: '#faf8f4',
     description: [
-      'The Whisper is for the family who senses the name — who can almost hear it — but needs a quiet space and a thoughtful companion to bring it fully into view. It begins with our naming questionnaire, taken at your own pace, and leads into a single, unhurried thirty-minute conversation.',
-      'In that session, we sit with your answers together. We talk through what draws you and what you instinctively turn from. We explore a curated shortlist, chosen with care, and by the end you will leave with something you didn\'t have before: a clearer sense of what the name needs to be.',
+      'The Whisper is for the family who senses the name — who can almost hear it — but needs a quiet space and a thoughtful companion to bring it fully into view. It begins with my naming questionnaire, taken at your own pace, and leads into a single, unhurried thirty-minute conversation.',
+      'In that session, I sit with your answers. I talk through what draws you and what you instinctively turn from. I explore a curated shortlist, chosen with care, and by the end you will leave with something you didn\'t have before: a clearer sense of what the name needs to be.',
     ],
-    whatNext: 'Once you submit the questionnaire, our team reads every answer with care. Within two working days we will write to you with our initial thoughts and suggested times to speak. We will share a curated shortlist in advance of your session, and afterwards send a follow-up email summarising everything we covered together.',
+    whatNext: 'Once you submit the questionnaire, I read every answer with care. Within two working days I will write to you with my initial thoughts and suggested times to speak. I will share a curated shortlist in advance of your session, and afterwards send a follow-up email summarising everything covered in your session.',
   },
   journey: {
     tier: 'Most Popular',
@@ -32,11 +32,11 @@ const SERVICE_DATA = {
     headerBg: '#c8a87a',
     btnTextColor: '#2c1810',
     description: [
-      'The Journey is our most chosen path — for families who know that a name carries weight, and who want to find theirs through real conversation rather than a list. It unfolds across two one-hour sessions, with time between them to reflect, revisit, and let ideas settle.',
-      'We begin with our in-depth questionnaire, richer and more searching than the standard form. Between and after our sessions, we are in contact by email. At the end, you receive a beautifully crafted PDF report — your names in full, with their meanings, origins, sibling harmony notes, and our personal reflections.',
+      ‘The Journey is my most chosen path — for families who know that a name carries weight, and who want to find theirs through real conversation rather than a list. It unfolds across two one-hour sessions, with time between them to reflect, revisit, and let ideas settle.’,
+      ‘I begin with my in-depth questionnaire, richer and more searching than the standard form. Between and after your sessions, I am in contact by email. At the end, you receive a beautifully crafted PDF report — your names in full, with their meanings, origins, sibling harmony notes, and my personal reflections.’,
     ],
-    whatNext: 'After you submit the in-depth questionnaire, we review your answers carefully and write to you within two working days with our first impressions and available times for your initial session. We will share a detailed longlist in advance, and after each conversation you will receive an email summary. Your PDF report arrives once our work together is complete.',
-    disclaimer: 'Please note: the questionnaire above is our initial form. Once we’ve reviewed your responses, we’ll get back to you with an initial list, next steps, and payment details. We will then send you a more detailed, in-depth questionnaire to complete before your first session.',
+    whatNext: ‘After you submit the in-depth questionnaire, I review your answers carefully and write to you within two working days with my first impressions and available times for your initial session. I will share a detailed longlist in advance, and after each conversation you will receive an email summary. Your PDF report arrives once the process is complete.’,
+    disclaimer: ‘Please note: the questionnaire above is my initial form. Once I\’ve reviewed your responses, I\’ll get back to you with an initial list, next steps, and payment details. I will then send you a more detailed, in-depth questionnaire to complete before your first session.’,
   },
   unfolding: {
     tier: 'Full Service',
@@ -51,11 +51,11 @@ const SERVICE_DATA = {
     headerBg: '#e2c8b4',
     btnTextColor: '#faf8f4',
     description: [
-      'The Unfolding is for the family who wants to be accompanied through the whole of it — not just the finding, but the feeling, the doubting, and the arriving. There is no fixed end date. We stay with you, through three one-hour sessions and as many emails as the process asks for, until the name is truly decided.',
-      'You will have access to a shared, living document — a space where our research, your reflections, and every name we consider together are gathered and updated as we go. And at the end, we write you a personal naming letter: the story of how your child\'s name was found, in your own words and ours, to keep.',
+      ‘The Unfolding is for the family who wants to be accompanied through the whole of it — not just the finding, but the feeling, the doubting, and the arriving. There is no fixed end date. I stay with you, through three one-hour sessions and as many emails as the process asks for, until the name is truly decided.’,
+      ‘You will have access to a shared, living document — a space where my research, your reflections, and every name considered together are gathered and updated as we go. And at the end, I write you a personal naming letter: the story of how your child\’s name was found, to keep.’,
     ],
-    whatNext: 'Once you submit the questionnaire, we read it with the full attention this path deserves and write to you within two working days. We will suggest times for your first session, share our opening thoughts, and begin building your shared document. From there, we work at whatever pace your family needs — there is no pressure to move faster than feels right.',
-    disclaimer: 'Please note: the questionnaire above is our initial form. Once we’ve reviewed your responses, we’ll get back to you with an initial list, next steps, and payment details. We will then send you a more detailed, in-depth questionnaire to complete before your first session.',
+    whatNext: ‘Once you submit the questionnaire, I read it with the full attention this path deserves and write to you within two working days. I will suggest times for your first session, share my opening thoughts, and begin building your shared document. From there, I work at whatever pace your family needs — there is no pressure to move faster than feels right.’,
+    disclaimer: ‘Please note: the questionnaire above is my initial form. Once I\’ve reviewed your responses, I\’ll get back to you with an initial list, next steps, and payment details. I will then send you a more detailed, in-depth questionnaire to complete before your first session.’,
   },
 };
 

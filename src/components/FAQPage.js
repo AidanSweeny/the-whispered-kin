@@ -7,19 +7,19 @@ const faqs = [
     items: [
       {
         q: "How does it work?",
-        a: "It begins with our free questionnaire — 10 to 15 minutes, taken at your own pace. Once we've read your answers, we'll be in touch within two working days with our initial thoughts. From there, you choose the path that feels right: The Whisper (£50), The Journey (£200), or The Unfolding (£375). For anything you'd like to ask before starting, email cassia@thewhisperedkin.com.",
+        a: "It begins with my free questionnaire — 10 to 15 minutes, taken at your own pace. Once I've read your answers, I'll be in touch within two working days with my initial thoughts. From there, you choose the path that feels right: The Whisper (£50), The Journey (£200), or The Unfolding (£375). For anything you'd like to ask before starting, email cassia@thewhisperedkin.com.",
       },
       {
         q: "How long does it take?",
-        a: "We respond to all questionnaires within two working days. From there, the timeline depends on the package you choose — from a focused single session with The Whisper, to an ongoing, open-ended relationship with The Unfolding. If you have an urgent deadline, please mention it in your questionnaire and we'll do everything we can.",
+        a: "I respond to all questionnaires within two working days. From there, the timeline depends on the package you choose — from a focused single session with The Whisper, to an ongoing, open-ended relationship with The Unfolding. If you have an urgent deadline, please mention it in your questionnaire and I'll do everything I can.",
       },
       {
         q: "What do I actually receive?",
-        a: "It depends on your chosen path. The Whisper includes a curated shortlist explored together in a 30-minute consultation. The Journey delivers two one-hour sessions and a beautifully crafted PDF report. The Unfolding offers complete accompaniment — three sessions, a shared living document, and a personal naming letter to keep. For a full breakdown, visit our Services page or email cassia@thewhisperedkin.com.",
+        a: "It depends on your chosen path. The Whisper includes a curated shortlist explored together in a 30-minute consultation. The Journey delivers two one-hour sessions and a beautifully crafted PDF report. The Unfolding offers complete accompaniment — three sessions, a shared living document, and a personal naming letter to keep. For a full breakdown, visit my Services page or email cassia@thewhisperedkin.com.",
       },
       {
         q: "What happens after I submit the questionnaire?",
-        a: "We read every answer carefully and write to you within two working days. For The Journey and The Unfolding, we'll also send a more in-depth questionnaire once your place is confirmed and payment is arranged. Every package includes follow-up support — you're never left without someone to ask.",
+        a: "I read every answer carefully and write to you within two working days. For The Journey and The Unfolding, I'll also send a more in-depth questionnaire once your place is confirmed and payment is arranged. Every package includes follow-up support — you're never left without someone to ask.",
       },
     ],
   },
@@ -32,15 +32,15 @@ const faqs = [
       },
       {
         q: "Do we need to know the sex of our baby?",
-        a: "Not at all. We can work with any situation — known sex, unknown, or names that feel beautifully ungendered. Simply let us know in the questionnaire.",
+        a: "Not at all. I can work with any situation — known sex, unknown, or names that feel beautifully ungendered. Simply let me know in the questionnaire.",
       },
       {
         q: "What if my partner and I disagree on names?",
-        a: "It's one of the most common reasons families come to us. We read both sets of instincts and look for names that speak to you both. Occasionally, the right name is one neither of you had considered yet.",
+        a: "It's one of the most common reasons families come to me. I read both sets of instincts and look for names that speak to you both. Occasionally, the right name is one neither of you had considered yet.",
       },
       {
         q: "Can I complete the questionnaire if I already have names in mind?",
-        a: "Please do share them. Names you've loved, names that felt close but not quite right — all of it helps us understand what you're truly looking for.",
+        a: "Please do share them. Names you've loved, names that felt close but not quite right — all of it helps me understand what you're truly looking for.",
       },
     ],
   },
@@ -49,11 +49,11 @@ const faqs = [
     items: [
       {
         q: "Where do you find the names?",
-        a: "Everywhere — etymology, mythology, literature, history, linguistics, botanical traditions, and the quieter corners of cultural heritage. We also consider how a name sounds alongside your surname and how it wears across a lifetime.",
+        a: "Everywhere — etymology, mythology, literature, history, linguistics, botanical traditions, and the quieter corners of cultural heritage. I also consider how a name sounds alongside your surname and how it wears across a lifetime.",
       },
       {
         q: "Will the names be unusual?",
-        a: "We take our cue entirely from you. Timeless and familiar, or quietly rare and deeply meaningful — we don't have an agenda toward unusual. We have an agenda toward right.",
+        a: "I take my cue entirely from you. Timeless and familiar, or quietly rare and deeply meaningful — I don't have an agenda toward unusual. I have an agenda toward right.",
       },
       {
         q: "Can you help with middle names too?",
@@ -61,7 +61,7 @@ const faqs = [
       },
       {
         q: "Do you only suggest English names?",
-        a: "Not at all. Our research spans Celtic, Scandinavian, Arabic, Hebrew, Latin, and many more traditions. If your family has a particular heritage or a language you love, we'll explore it.",
+        a: "Not at all. My research spans Celtic, Scandinavian, Arabic, Hebrew, Latin, and many more traditions. If your family has a particular heritage or a language you love, I'll explore it.",
       },
     ],
   },
@@ -70,11 +70,11 @@ const faqs = [
     items: [
       {
         q: "Is my information kept private?",
-        a: "Completely. Everything you share is held with care and confidence. We never share your information with third parties. For any privacy questions, email cassia@thewhisperedkin.com.",
+        a: "Completely. Everything you share is held with care and confidence. I never share your information with third parties. For any privacy questions, email cassia@thewhisperedkin.com.",
       },
       {
         q: "What if none of the names feel right?",
-        a: "Please tell us. We'd rather understand and try again than leave you without the right name. Email cassia@thewhisperedkin.com and we'll talk it through.",
+        a: "Please tell me. I'd rather understand and try again than leave you without the right name. Email cassia@thewhisperedkin.com and I'll talk it through.",
       },
       {
         q: "When should I get in touch?",
@@ -82,7 +82,7 @@ const faqs = [
       },
       {
         q: "Do you work with families outside the UK?",
-        a: "Yes — we work entirely online and with families all over the world. For any questions about working together internationally, email cassia@thewhisperedkin.com.",
+        a: "Yes — I work entirely online and with families all over the world. For any questions about working together internationally, email cassia@thewhisperedkin.com.",
       },
     ],
   },
@@ -114,7 +114,7 @@ export default function FAQPage({ setCurrentPage }) {
           <h1 className="faq-hero-title">What to Expect</h1>
           <div className="faq-hero-rule" />
           <p className="faq-hero-sub">
-            Everything we are asked, answered as honestly as we can.
+            Everything I am asked, answered as honestly as I can.
           </p>
         </section>
 
@@ -177,7 +177,7 @@ export default function FAQPage({ setCurrentPage }) {
           <div className="faq-cta-eyebrow">Ready to Begin</div>
           <h2 className="faq-cta-title">Your name is waiting<br />to be found</h2>
           <p className="faq-cta-body">
-            Take the questionnaire and we'll be in touch within a week.
+            Take the questionnaire and I'll be in touch within a week.
           </p>
           <button className="faq-cta-btn" onClick={() => setCurrentPage('pricing')}>
             Begin Your Journey →

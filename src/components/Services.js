@@ -5,21 +5,21 @@ const items = [
   {
     num: '01',
     title: 'Listening First',
-    text: 'Every naming journey begins with your story. We listen closely to your family roots, values, and instincts before a single name is spoken.',
+    text: 'Every naming journey begins with your story. I listen closely to your family roots, values, and instincts before a single name is spoken.',
     tag: 'For your family',
     accent: '#d4845a',
   },
   {
     num: '02',
     title: 'Thoughtful Research',
-    text: 'From ancient traditions to modern literary gems, we explore names across languages, histories, and cultures to uncover those rich in meaning.',
+    text: 'From ancient traditions to modern literary gems, I explore names across languages, histories, and cultures to uncover those rich in meaning.',
     tag: 'Rich in meaning',
     accent: '#5a8f6e',
   },
   {
     num: '03',
     title: 'A name that belongs',
-    text: 'With gentle guidance and reflection of our discoveries, we help you recognise the name that truly belongs to your little one.',
+    text: 'With gentle guidance and reflection of my discoveries, I help you recognise the name that truly belongs to your little one.',
     tag: 'A name for life',
     accent: '#7a6aac',
   },
@@ -60,7 +60,7 @@ export default function Services() {
   return (
     <section className="svc-c" ref={sectionRef}>
       <div className={`svc-c__header ${visibleCount >= 1 ? 'visible' : ''}`}>
-        <h2 className="svc-c__heading">What we bring</h2>
+        <h2 className="svc-c__heading">What I bring</h2>
         <em className="svc-c__subheading">to your journey</em>
       </div>
 

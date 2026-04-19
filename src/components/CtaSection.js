@@ -57,7 +57,7 @@ export default function CtaSection({ onCtaClick }) {
         <p className="cta__eyebrow">Begin your journey</p>
         <h2 className="cta__heading">Ready to begin your naming journey?</h2>
         <p className="cta__text">
-          Let us help you discover the perfect name for your little one.
+          Let me help you discover the perfect name for your little one.
         </p>
         <button className="cta__btn" onClick={onCtaClick}>
           Start Your Journey

@@ -28,11 +28,11 @@ export default function AboutMePage({ setCurrentPage }) {
               Names have been a topic of conversation for my family for as long as I can remember.
               My mother — whose thought and care for such things is, I think, genuinely
               second to none — gave each of her children a name that was both considered
-              and deeply felt. We all have six letters. We each carry an <em>i</em> and
-              an <em>a</em>, which she has always believed make a name prettier to the
-              eye and the ear. We are siblings in the Bible, give or take the translation.
-              Our middle names hold the flowers from my parents' wedding day, the turn of
-              the millennium, and the people in our family who meant too much to be
+              and deeply felt. Six letters each, an <em>i</em> and an <em>a</em> in every
+              name — qualities she has always believed make a name prettier to the eye and
+              the ear. The names are siblings in the Bible, give or take the translation.
+              The middle names hold the flowers from my parents' wedding day, the turn of
+              the millennium, and the people in the family who meant too much to be
               forgotten.
             </p>
             <p className="about-me-bio">

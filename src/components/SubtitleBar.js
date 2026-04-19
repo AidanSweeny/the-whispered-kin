@@ -4,7 +4,7 @@ import '../styles/SubtitleBar.css';
 const LINES = [
   { text: "A bespoke baby-naming consultancy",                style: 'primary' },
   { text: "devoted to story-rich, meaningful names",          style: 'primary' },
-  { text: "We work closely with families to understand their", style: 'secondary' },
+  { text: "I work closely with families to understand their", style: 'secondary' },
   { text: "values",                                           style: 'accent' },
   { text: "heritage",                                         style: 'accent' },
   { text: "hopes",                                            style: 'accent' },
