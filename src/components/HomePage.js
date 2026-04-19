@@ -23,6 +23,7 @@ const HomePage = ({ setCurrentPage }) => {
   const parallaxContainerRef = useRef(null);
   const [parallaxOffsets, setParallaxOffsets] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
   const whyRef = useRef(null); // for fade-in of why items
+  const rafRef = useRef(null);
  
   useEffect(() => {
     if (!timelineRef.current) return;
@@ -80,26 +81,33 @@ const HomePage = ({ setCurrentPage }) => {
   // Parallax scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      if (!parallaxContainerRef.current) return;
+      // Throttle to one update per animation frame to prevent jitter
+      if (rafRef.current) return;
+      rafRef.current = requestAnimationFrame(() => {
+        rafRef.current = null;
+        if (!parallaxContainerRef.current) return;
 
-      const containerRect = parallaxContainerRef.current.getBoundingClientRect();
-      const containerTop = containerRect.top;
-      const containerHeight = containerRect.height;
-      const windowHeight = window.innerHeight;
+        const containerRect = parallaxContainerRef.current.getBoundingClientRect();
+        const containerTop = containerRect.top;
+        const containerHeight = containerRect.height;
+        const windowHeight = window.innerHeight;
 
-      // Only calculate parallax when container is in view
-      if (containerTop < windowHeight && containerTop + containerHeight > 0) {
-        // Calculate scroll progress relative to container (0 to 1)
-        const scrollProgress = Math.max(0, (windowHeight - containerTop) / (windowHeight + containerHeight));
-
-        const speeds = [0.8, 3.0, 0.3, 1.5, 0.6, 0.9, 1.5, 2.5, 0.7, 1.3];
-        const newOffsets = speeds.map((speed) => scrollProgress * 400 * speed);
-        setParallaxOffsets(newOffsets);
-      }
+        // Only calculate parallax when container is in view
+        if (containerTop < windowHeight && containerTop + containerHeight > 0) {
+          const scrollProgress = Math.max(0, (windowHeight - containerTop) / (windowHeight + containerHeight));
+          const speeds = [0.8, 3.0, 0.3, 1.5, 0.6, 0.9, 1.5, 2.5, 0.7, 1.3];
+          const newOffsets = speeds.map((speed) => scrollProgress * 400 * speed);
+          setParallaxOffsets(newOffsets);
+        }
+      });
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    // passive: true lets the browser optimise scroll without waiting for JS
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    };
   }, []);
 
   return (

@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 
 const CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const WHISPERED_KIN = "THE WHISPERED KIN";
+const WHISPERED_KIN_PARTS = ["THE", "WHISPERED", "KIN"];
 const CYCLE_INTERVAL = 1200;
 const FLIP_DELAY = 200;
 const TRAIL_LINGER = 2000;
@@ -44,9 +45,18 @@ export default function Start({ names = ["HERITAGE", "TIMELESS", "PERSONAL", "FA
   // ── Grid builder ─────────────────────────────────────────────────────────────
   const buildGrid = useCallback((cols, rows) => {
     const grid = [];
+    const needsWrap = cols < WHISPERED_KIN.length;
     for (let r = 0; r < rows; r++) {
       for (let c = 0; c < cols; c++) {
-        const kinChar = r === 0 && c < WHISPERED_KIN.length ? WHISPERED_KIN[c] : null;
+        let kinChar = null;
+        if (needsWrap) {
+          // Split into three rows: "THE" / "WHISPERED" / "KIN"
+          if (r < WHISPERED_KIN_PARTS.length && c < WHISPERED_KIN_PARTS[r].length) {
+            kinChar = WHISPERED_KIN_PARTS[r][c];
+          }
+        } else {
+          kinChar = r === 0 && c < WHISPERED_KIN.length ? WHISPERED_KIN[c] : null;
+        }
         grid.push({
           id: r * cols + c, row: r, col: c,
           char: kinChar || randomChar(),
