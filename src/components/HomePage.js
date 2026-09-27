@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 import '../styles/HomePage.css';
 import Start from './Start';
 import Header from './Header';
@@ -17,13 +17,33 @@ import Services from './Services';
 import CtaSection from './CtaSection';
 import { AboutSection } from './AboutSection';
 
+const IDLE_TIMEOUT = 2 * 60 * 1000;
+
 
 const HomePage = ({ setCurrentPage }) => {
   const timelineRef = useRef(null);
   const parallaxContainerRef = useRef(null);
   const [parallaxOffsets, setParallaxOffsets] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
-  const whyRef = useRef(null); // for fade-in of why items
+  const whyRef = useRef(null);
   const rafRef = useRef(null);
+  const [isIdle, setIsIdle] = useState(false);
+  const idleTimerRef = useRef(null);
+
+  const resetIdleTimer = useCallback(() => {
+    setIsIdle(false);
+    clearTimeout(idleTimerRef.current);
+    idleTimerRef.current = setTimeout(() => setIsIdle(true), IDLE_TIMEOUT);
+  }, []);
+
+  useEffect(() => {
+    const events = ['mousemove', 'scroll', 'keydown', 'click', 'touchstart'];
+    events.forEach(e => window.addEventListener(e, resetIdleTimer, { passive: true }));
+    resetIdleTimer();
+    return () => {
+      events.forEach(e => window.removeEventListener(e, resetIdleTimer));
+      clearTimeout(idleTimerRef.current);
+    };
+  }, [resetIdleTimer]);
  
   useEffect(() => {
     if (!timelineRef.current) return;
@@ -137,10 +157,10 @@ const HomePage = ({ setCurrentPage }) => {
 
           {/* Balloons BEHIND the text (zIndex < 10) */}
           {[
-            { top: '30%', left: '18%', size: 140, image: balloon1,   speed: -4, hideMobile: true },
-            { top: '-30%', left: '8%',  size: 200, image: balloon2,  speed: 6,  hideMobile: false  },
-            { top: '10%', left: '40%', size: 160, image: balloon3,  speed: 6,   hideMobile: false  },
-            { top: '-10%', left: '72%', size: 350, image: balloon4,  speed: 8,  hideMobile: false },
+            { top: '30%',  left: '18%', size: 140, image: balloon1, speed: -4, hideMobile: true },
+            { top: '-30%', left: '8%',  size: 200, image: balloon2, speed: 6,  hideMobile: false },
+            { top: '10%',  left: '40%', size: 160, image: balloon3, speed: 6,  hideMobile: false },
+            { top: '-10%', left: '72%', size: 350, image: balloon4, speed: 8,  hideMobile: false },
           ].map((b, i) => (
             <img
               key={`back-${i}`}
@@ -164,12 +184,12 @@ const HomePage = ({ setCurrentPage }) => {
 
           {/* Balloons IN FRONT of the text (zIndex > 10) */}
           {[
-            { top: '37%',  left: '5%',  size: 280, image: balloon5,   speed: 4,  hideMobile: true },
-            { top: '15%', left: '38%', size: 170, image: balloon6,   speed: 10, hideMobile: true  },
-            { top: '20%', left: '50%', size: 210, image: balloon7,   speed: 3,  hideMobile: true  },
-            { top: '-5%', left: '30%', size: 145, image: balloon8,   speed: 5,  hideMobile: true  },
-            { top: '20%', left: '82%', size: 190, image: balloon9,   speed: 7,  hideMobile: true },
-            { top: '60%', left: '55%', size: 260, image: balloon10,  speed: 9,  hideMobile: true  },
+            { top: '37%', left: '5%',  size: 280, image: balloon5,  speed: 4,  hideMobile: true },
+            { top: '15%', left: '38%', size: 170, image: balloon6,  speed: 10, hideMobile: true },
+            { top: '20%', left: '50%', size: 210, image: balloon7,  speed: 3,  hideMobile: true },
+            { top: '-5%', left: '30%', size: 145, image: balloon8,  speed: 5,  hideMobile: true },
+            { top: '20%', left: '82%', size: 190, image: balloon9,  speed: 7,  hideMobile: true },
+            { top: '60%', left: '55%', size: 260, image: balloon10, speed: 9,  hideMobile: true },
           ].map((b, i) => (
             <img
               key={`front-${i}`}

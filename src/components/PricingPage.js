@@ -519,8 +519,8 @@ const packages = [
     id: "whisper",
     tier: "First Step",
     name: "The Whisper",
-    price: "50",
-    tagline: "A gentle, focused conversation for families who need a little guidance.",
+    price: "68",
+    tagline: "A gentle, focused conversation for families who need guidance.",
     features: [
       { text: "My naming questionnaire — your starting point, taken at your own pace" },
       { text: "One 30-minute consultation by call or video to talk through your answers and my initial thoughts" },
@@ -536,11 +536,11 @@ const packages = [
     id: "journey",
     tier: "Most Popular",
     name: "The Journey",
-    price: "200",
+    price: "242",
     tagline: "For families who want to explore deeply and arrive at their name with real confidence.",
     features: [
       { text: "My most comprehensive in-depth questionnaire" },
-      { text: "Two one-hour consultations by call or video, at a pace that suits you" },
+      { text: "Two, one-hour consultations by call or video, at a pace that suits you" },
       { text: "A beautifully ", em: "curated PDF report", rest: " — your names with their full meanings, origins, and my personal notes" },
       { text: "Sibling harmony, middle name, and surname flow all considered" },
       { text: "Follow-up email Q&A after each session" },
@@ -555,13 +555,13 @@ const packages = [
     id: "unfolding",
     tier: "Full Service",
     name: "The Unfolding",
-    price: "375",
+    price: "485",
     tagline: "Complete accompaniment to the moment the name becomes theirs.",
     features: [
       { text: "My most comprehensive in-depth questionnaire" },
-      { text: "Three one-hour consultations by call or video" },
+      { text: "Three, one-hour consultations by call or video" },
       { text: "A ", em: "shared, living document", rest: " — your names, research, and notes updated together as the process evolves" },
-      { text: "Continued communication by messaging until your name is decided — no fixed end date" },
+      { text: "Continued communication via messaging service of your choice" },
       { text: "Sibling harmony, middle name, and surname flow all considered" },
       { text: "A personal naming letter to frame — the story of how your child's name was found" },
     ],
@@ -599,7 +599,7 @@ export default function PricingPage({ setCurrentPage, onServiceSelect }) {
           <div className="pr-hero-rule" />
           <p className="pr-hero-sub">
             Whether you need
-            a single conversation to unlock what you already know, or a longer, unhurried
+            a single conversation for inspiration, or a longer, unhurried
             journey of discovery. Choose the path that feels right for where you are.
           </p>
         </section>
@@ -619,8 +619,8 @@ export default function PricingPage({ setCurrentPage, onServiceSelect }) {
                 <span className="pr-free-badge">Free</span>
               </div>
               <div className="pr-free-desc">
-                Before anything else, I listen. My questionnaire takes 10–15 minutes
-                and is the first step for every family, whichever path they choose. I will get back to you within 1 week with initial ideas and thoughts based on your answers — no obligation to continue until you're ready.
+                My questionnaire takes 10–15 minutes
+                and is the first step for every family, whichever path they choose. I will get back to you within 1 week with initial thoughts and next steps — no obligation to continue until you're ready.
 
               </div>
               <div className="pr-free-features">
@@ -677,7 +677,7 @@ export default function PricingPage({ setCurrentPage, onServiceSelect }) {
           <div className="pr-bespoke-title">Not sure which to choose?</div>
           <div className="pr-bespoke-body">
             Start with the free questionnaire — I'll suggest the path that feels right
-            for your situation. You're also welcome to write to me first at{" "}
+            for your family. You're also welcome to write to me first at{" "}
             <span style={{ color: "#8b1a1a" }}>cassia@thewhisperedkin.com</span>.
             There's no obligation until you're ready.
           </div>
@@ -688,7 +688,7 @@ export default function PricingPage({ setCurrentPage, onServiceSelect }) {
           <div>
             <div className="pr-promise-icon">✦</div>
             <div className="pr-promise-title">No rushing</div>
-            <p className="pr-promise-text">I work at the pace your family needs. There are no hurried lists here.</p>
+            <p className="pr-promise-text">I work at the pace your family needs.</p>
           </div>
           <div>
             <div className="pr-promise-icon">✦</div>

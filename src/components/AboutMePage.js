@@ -25,30 +25,21 @@ export default function AboutMePage({ setCurrentPage }) {
             <p className="about-me-role">Founder &amp; Naming Consultant</p>
             <hr className="about-me-rule" />
             <p className="about-me-bio">
-              Names have been a topic of conversation for my family for as long as I can remember.
-              My mother — whose thought and care for such things is, I think, genuinely
-              second to none — gave each of her children a name that was both considered
-              and deeply felt. Six letters each, an <em>i</em> and an <em>a</em> in every
-              name — qualities she has always believed make a name prettier to the eye and
-              the ear. The names are siblings in the Bible, give or take the translation.
-              The middle names hold the flowers from my parents' wedding day, the turn of
-              the millennium, and the people in the family who meant too much to be
-              forgotten.
+              Names have been a subject of conversation in my family for as long as I can remember.
+              My mother, who has always given these things a great deal of thought, chose each of our names carefully. They have a particular shape and weight to them, and a particular rhythm, which she always thought makes a name more beautiful. Our names come from the same family of names, and she loves how they belong together.
+              Our middle names carry their own little history: the flowers from my parents’ wedding day, the turn of the millennium, and the names of loved ones that have been carried forward.
+
             </p>
             <p className="about-me-bio">
-              I grew up knowing that my name was not chosen lightly. It was balanced,
-              strong, distinctive — and it meant something, not just in origin, but in
-              the story of where I came from. That knowledge settled something in me early,
-              and it never quite left. Names followed me into every corner of my life:
-              conversations with close friends, long flights with strangers who happened
-              to ask the right question, the homes of families whose children I spent years
-              caring for. Wherever I went, I found my way back to them.
+             I have grown up knowing that my name was chosen with intention. It is balanced, strong and distinctive.
+              Names came up in all sorts of parts of my life: in conversations with close friends, on long flights with strangers, and in the homes of families whose children I have cared for over the years. A simple question about a name always leads me somewhere — to family stories, memories, places, languages, traditions, and the people who have shaped them. I have grown up knowing that names are not just words, but a reflection of the people and stories they belong to.
             </p>
             <p className="about-me-bio">
-              The Whispered Kin grew from that lifelong conversation. I believe the right
-              name is rarely chosen from a list — it is recognised. It is already somewhere
-              in the story of your family, waiting for the right moment and the right
-              person to help you hear it. That is what I am here for.
+            The Whispered Kin grew from that lifelong conversation. I have come to believe that choosing a name is rarely just a matter of finding one you like. Names carry associations, memories and connections, and sometimes the right one emerges from a story you already know, or from something you sense about the person who is about to join it. It can hold something of where a family has come from, while also leaving room for the person that child will become. The Whispered Kin is a place to explore those possibilities and find a name that feels right for your family.
+
+
+
+
             </p>
             <button
               className="about-me-btn"
