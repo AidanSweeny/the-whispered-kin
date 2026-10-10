@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import '../styles/HomePage.css';
 import Start from './Start';
 import Header from './Header';
@@ -17,30 +17,12 @@ import Services from './Services';
 import CtaSection from './CtaSection';
 import { AboutSection } from './AboutSection';
 
-const IDLE_TIMEOUT = 2 * 60 * 1000;
-
-
 const HomePage = ({ setCurrentPage }) => {
   const timelineRef = useRef(null);
   const parallaxContainerRef = useRef(null);
   const [parallaxOffsets, setParallaxOffsets] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
   const whyRef = useRef(null);
   const rafRef = useRef(null);
-  const idleTimerRef = useRef(null);
-
-  const resetIdleTimer = useCallback(() => {
-    clearTimeout(idleTimerRef.current);
-  }, []);
-
-  useEffect(() => {
-    const events = ['mousemove', 'scroll', 'keydown', 'click', 'touchstart'];
-    events.forEach(e => window.addEventListener(e, resetIdleTimer, { passive: true }));
-    resetIdleTimer();
-    return () => {
-      events.forEach(e => window.removeEventListener(e, resetIdleTimer));
-      clearTimeout(idleTimerRef.current);
-    };
-  }, [resetIdleTimer]);
  
   useEffect(() => {
     if (!timelineRef.current) return;
