@@ -26,13 +26,10 @@ const HomePage = ({ setCurrentPage }) => {
   const [parallaxOffsets, setParallaxOffsets] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
   const whyRef = useRef(null);
   const rafRef = useRef(null);
-  const [isIdle, setIsIdle] = useState(false);
   const idleTimerRef = useRef(null);
 
   const resetIdleTimer = useCallback(() => {
-    setIsIdle(false);
     clearTimeout(idleTimerRef.current);
-    idleTimerRef.current = setTimeout(() => setIsIdle(true), IDLE_TIMEOUT);
   }, []);
 
   useEffect(() => {
