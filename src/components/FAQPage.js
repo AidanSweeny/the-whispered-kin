@@ -7,19 +7,19 @@ const faqs = [
     items: [
       {
         q: "How does it work?",
-        a: "It begins with my free questionnaire — 10 to 15 minutes, taken at your own pace. Once I've read your answers, I'll be in touch within two working days with my initial thoughts. From there, you choose the path that feels right: The Whisper (£50), The Journey (£200), or The Unfolding (£375). For anything you'd like to ask before starting, email cassia@thewhisperedkin.com.",
+        a: "It begins with my free questionnaire — 10 to 15 minutes, taken at your own pace. Once I've read your answers, I'll be in touch within a week with any initial thoughts. From there, you can choose the path that feels right for you: The Whisper, The Journey, or The Unfolding. For anything you'd like to ask before starting, please email cassia@thewhisperedkin.com.",
       },
       {
         q: "How long does it take?",
-        a: "I respond to all questionnaires within two working days. From there, the timeline depends on the package you choose — from a focused single session with The Whisper, to an ongoing, open-ended relationship with The Unfolding. If you have an urgent deadline, please mention it in your questionnaire and I'll do everything I can.",
+        a: "I respond to all questionnaires within a week. From there, the timeline depends on the package you choose — from a focused single session with The Whisper, to an ongoing, open-ended relationship with The Unfolding. If you have an urgent deadline, please mention it in your questionnaire and I'll do everything I can to facilitate.",
       },
       {
         q: "What do I actually receive?",
-        a: "It depends on your chosen path. The Whisper includes a curated shortlist explored together in a 30-minute consultation. The Journey delivers two one-hour sessions and a beautifully crafted PDF report. The Unfolding offers complete accompaniment — three sessions, a shared living document, and a personal naming letter to keep. For a full breakdown, visit my Services page or email cassia@thewhisperedkin.com.",
+        a: "It depends on your chosen path. The Whisper includes a curated shortlist explored together in a 30-minute consultation. The Journey delivers two one-hour sessions and a beautifully crafted PDF report. The Unfolding offers complete accompaniment — three sessions, a shared living document, and a personal naming letter to keep. For a full breakdown, visit my Services page or email me at cassia@thewhisperedkin.com.",
       },
       {
         q: "What happens after I submit the questionnaire?",
-        a: "I read every answer carefully and write to you within two working days. For The Journey and The Unfolding, I'll also send a more in-depth questionnaire once your place is confirmed and payment is arranged. Every package includes follow-up support — you're never left without someone to ask.",
+        a: "I read every answer carefully and write to you within a week. For The Journey and The Unfolding, I'll also send a more in-depth questionnaire once your place is confirmed and payment is arranged.",
       },
     ],
   },
@@ -28,11 +28,11 @@ const faqs = [
     items: [
       {
         q: "How long does the questionnaire take?",
-        a: "Most families take 10 to 15 minutes. There are no right or wrong answers — only yours. The detail you almost didn't include is often the most useful.",
+        a: "Most families take 10 to 15 minutes. There are no right or wrong answers. The more you share with me, the better I can understand your instincts and preferences.",
       },
       {
         q: "Do we need to know the sex of our baby?",
-        a: "Not at all. I can work with any situation — known sex, unknown, or names that feel beautifully ungendered. Simply let me know in the questionnaire.",
+        a: "Not at all. I can work with any situation — known sex, unknown, or names that feel unisex if preferred. Simply let me know in the questionnaire.",
       },
       {
         q: "What if my partner and I disagree on names?",
@@ -49,19 +49,19 @@ const faqs = [
     items: [
       {
         q: "Where do you find the names?",
-        a: "Everywhere — etymology, mythology, literature, history, linguistics, botanical traditions, and the quieter corners of cultural heritage. I also consider how a name sounds alongside your surname and how it wears across a lifetime.",
+        a: "Everywhere — etymology, mythology, literature, history, linguistics, botanical traditions, cultural heritage, the list goes on. I can also consider how a name sounds alongside your surname and how it wears across a lifetime.",
       },
       {
         q: "Will the names be unusual?",
-        a: "I take my cue entirely from you. Timeless and familiar, or quietly rare and deeply meaningful — I don't have an agenda toward unusual. I have an agenda toward right.",
+        a: "I take my cue entirely from you. Timeless, familiar, unique — I don't have an agenda toward unusual. I have an agenda toward your preferences.",
       },
       {
         q: "Can you help with middle names too?",
-        a: "Yes. Sibling harmony and middle name consideration are included in The Journey and The Unfolding. If you have specific questions about this, email cassia@thewhisperedkin.com.",
+        a: "Yes. Sibling harmony and middle name consideration are included in The Journey and The Unfolding. If you have specific questions about this, please email cassia@thewhisperedkin.com.",
       },
       {
         q: "Do you only suggest English names?",
-        a: "Not at all. My research spans Celtic, Scandinavian, Arabic, Hebrew, Latin, and many more traditions. If your family has a particular heritage or a language you love, I'll explore it.",
+        a: "Not at all. My research spans Celtic, Scandinavian, Arabic, Hebrew, Latin, and many more. If your family has a particular heritage or a language you love, I'll explore it.",
       },
     ],
   },
@@ -70,7 +70,7 @@ const faqs = [
     items: [
       {
         q: "Is my information kept private?",
-        a: "Completely. Everything you share is held with care and confidence. I never share your information with third parties. For any privacy questions, email cassia@thewhisperedkin.com.",
+        a: "Completely. Everything you share is held with care and confidence. I never share your information with third parties. For any privacy questions, please email cassia@thewhisperedkin.com.",
       },
       {
         q: "What if none of the names feel right?",
@@ -78,11 +78,11 @@ const faqs = [
       },
       {
         q: "When should I get in touch?",
-        a: "There is no such thing as too early — or too late. Some families come in the first trimester; others reach out after their baby has arrived. Wherever you are in the journey, you're welcome here.",
+        a: "There is no such thing as too early — or too late. Some families come in the first trimester; others reach out after their baby has arrived. Wherever you are in the journey, you're welcome here and I will do my best to accomodate you.",
       },
       {
         q: "Do you work with families outside the UK?",
-        a: "Yes — I work entirely online and with families all over the world. For any questions about working together internationally, email cassia@thewhisperedkin.com.",
+        a: "Yes — I have the ability to work online and so work with families all over the world. For any questions about working together internationally, please email cassia@thewhisperedkin.com.",
       },
     ],
   },
@@ -114,7 +114,7 @@ export default function FAQPage({ setCurrentPage }) {
           <h1 className="faq-hero-title">What to Expect</h1>
           <div className="faq-hero-rule" />
           <p className="faq-hero-sub">
-            Everything I am asked, answered as honestly as I can.
+            Please get in touch if you have any questions that aren't answered here. I want to make sure you feel confident and comfortable as we begin this journey together.
           </p>
         </section>
 

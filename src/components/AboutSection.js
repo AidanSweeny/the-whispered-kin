@@ -8,11 +8,9 @@ import { useEffect, useRef, useState } from 'react';
 
 const LINES = [
   { text: "My Philosophy",                                                                          className: "about-title" },
-  { text: "Trust · Family · Heritage",                                                         className: "about-tags" },
-  { text: "At The Whispered Kin, I believe the right name is rarely chosen from a list. My work is rooted in listening; to family stories, to heritage and language, and to instincts when the space is given. The result is a name that feels natural, meaningful, and deeply connected to the child who will carry it.", className: "about-info" },
-  { text: "Every name carries a story — a thread connecting past, present, and future. I believe that choosing a name is one of the most profound gifts a parent can give.", className: "about-info" },
-  { text: "I draw on history, linguistics, and cultural heritage to guide you toward a name that feels both timeless and entirely your own.", className: "about-info" },
-  { text: "Founded on the belief that names shape identity.",                                          className: "about-info about-info--closing" },
+  { text: "I believe that choosing a name deeply personal experience, guided by individuality, instinct and the things we hold dear. Inspiration can take many forms, from family connections and cultural traditions to the beauty of a particular sound, an unexpected discovery or simply a name that feels right. There is no single path to finding the perfect name, and it is this individuality that lies at the heart of The Whispered Kin.", className: "about-info" },
+  { text: "My approach begins with listening and understanding what matters most to you. Through thoughful conversation, careful research and genuine appreciation of names in all their forms, I explore possibilities that reflect your personal tastes and aspirations. Drawing on history, linguistics and culture, alongside creativity and intuition, i aim to make the process of finding a name both considered and enjoyable", className: "about-info" },
+  { text: "Whether your preferences lean towards timeless or contemporary, the familiar or the unexpected, my belief remains the same: a name should feel natural, meaningful to you and suited to the person who will carry it. Above all, I believe that choosing a name should be a thoughtful and rewarding experience, one that leaves you feeling confident in a decision that will last a lifetime.", className: "about-info" },
 ];
 
 export function AboutSection() {

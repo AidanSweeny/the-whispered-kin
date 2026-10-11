@@ -38,7 +38,8 @@
 }
 
 .about-info {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'EB Garamond', 'Palatino Linotype', serif;
+    font-size: 1.3rem;
     color: var(--color-earth-moss);
     margin: 0;
     line-height: 1.7;

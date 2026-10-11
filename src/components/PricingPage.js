@@ -517,7 +517,6 @@ const styles = `
 const packages = [
   {
     id: "whisper",
-    tier: "First Step",
     name: "The Whisper",
     price: "68",
     tagline: "A gentle, focused conversation for families who need guidance.",
@@ -534,35 +533,32 @@ const packages = [
   },
   {
     id: "journey",
-    tier: "Most Popular",
     name: "The Journey",
     price: "242",
     tagline: "For families who want to explore deeply and arrive at their name with real confidence.",
     features: [
       { text: "My most comprehensive in-depth questionnaire" },
-      { text: "Two, one-hour consultations by call or video, at a pace that suits you" },
-      { text: "A beautifully ", em: "curated PDF report", rest: " — your names with their full meanings, origins, and my personal notes" },
+      { text: "Two, one-hour consultations by call or video" },
       { text: "Sibling harmony, middle name, and surname flow all considered" },
       { text: "Follow-up email Q&A after each session" },
+      { text: "After both sessions, a beautifully ", em: "curated PDF report", rest: " — your names with their full meanings, origins, and my personal notes" },
     ],
     btn: "pr-btn-gold",
     btnText: "Begin The Journey",
-    badge: "Most Chosen",
     featured: true,
     delay: "0.1s",
   },
   {
     id: "unfolding",
-    tier: "Full Service",
     name: "The Unfolding",
     price: "485",
     tagline: "Complete accompaniment to the moment the name becomes theirs.",
     features: [
       { text: "My most comprehensive in-depth questionnaire" },
       { text: "Three, one-hour consultations by call or video" },
+      { text: "Sibling harmony, middle name, and surname flow all considered" },
       { text: "A ", em: "shared, living document", rest: " — your names, research, and notes updated together as the process evolves" },
       { text: "Continued communication via messaging service of your choice" },
-      { text: "Sibling harmony, middle name, and surname flow all considered" },
       { text: "A personal naming letter to frame — the story of how your child's name was found" },
     ],
     btn: "pr-btn-outline",
@@ -705,7 +701,7 @@ export default function PricingPage({ setCurrentPage, onServiceSelect }) {
         {/* CTA */}
         <section className="pr-cta">
           <div className="pr-cta-eyebrow">Ready to Begin</div>
-          <h2 className="pr-cta-title">The right name is<br />already out there</h2>
+          <h2 className="pr-cta-title"><br />The Whispered Kin</h2>
           <p className="pr-cta-body">
             Start with my free questionnaire — it's the same first step, whichever path you choose.
           </p>

@@ -2,13 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import '../styles/SubtitleBar.css';
 
 const LINES = [
-  { text: "A bespoke baby-naming consultancy",                style: 'primary' },
-  { text: "devoted to story-rich, meaningful names",          style: 'primary' },
-  { text: "I work closely with families to understand their", style: 'secondary' },
-  { text: "values",                                           style: 'accent' },
-  { text: "heritage",                                         style: 'accent' },
-  { text: "hopes",                                            style: 'accent' },
-  { text: "And find a name that truly belongs.",              style: 'closing' },
+  { text: "A personal approach to baby naming",                style: 'primary' },
+  { text: "Choosing a name is one of the first and most personal decisions we make for a child. Inspiration can come from anywhere; a cherished memory, a beautiful meaning, a particular sound, or something entirely unexpected. At The Whispered Kin, I offer a thoughtful and individual approach to baby naming, taking the time to understand your preferences, explore the possibilities and guide you towards a name that feels both meaningful and entirely your own.", style: 'accent' },
 ];
 
 const SubtitleBar = () => {

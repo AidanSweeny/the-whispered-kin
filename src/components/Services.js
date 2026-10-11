@@ -5,22 +5,19 @@ const items = [
   {
     num: '01',
     title: 'Listening First',
-    text: 'Every naming journey begins with your story. I listen closely to your family roots, values, and instincts before a single name is spoken.',
-    tag: 'For your family',
+    text: 'I take the time to understand your tastes, preferences and inspirations, establishing a clear sense of what you are looking for in a name.',
     accent: '#d4845a',
   },
   {
     num: '02',
     title: 'Thoughtful Research',
-    text: 'From ancient traditions to modern literary gems, I explore names across languages, histories, and cultures to uncover those rich in meaning.',
-    tag: 'Rich in meaning',
+    text: 'Drawing on linguistics, history, culture, I explore names both familiar and unexpected, considering their origins, meanings and distinctive qualities.',
     accent: '#5a8f6e',
   },
   {
     num: '03',
-    title: 'A name that belongs',
-    text: 'With gentle guidance and reflection of my discoveries, I help you recognise the name that truly belongs to your little one.',
-    tag: 'A name for life',
+    title: 'Considered Guidance',
+    text: 'I bring together a carefully curated selection of names, offering thoughtful insight to help you make your final choice with confidence.',
     accent: '#7a6aac',
   },
 ];

@@ -1,6 +1,6 @@
 import Header from './Header';
 import '../styles/AboutMePage.css';
-import aboutPhoto from '../images/slideshow1.jpg';
+import aboutPhoto from '../images/cassie.jpeg';
 
 export default function AboutMePage({ setCurrentPage }) {
   return (
